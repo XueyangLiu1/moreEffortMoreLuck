@@ -1,10 +1,10 @@
-package org.meml;
+package org.meml.client;
 
 /**
  * Hello world!
  *
  */
-public class MonopolyMain
+public class Client
 {
     public static void main( String[] args )
     {
