@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
  */
 public class Server
 {
-    private volatile int clientIndex = 0;
+    private int clientIndex = 0;
     private ServerSocket serverSocket;
     private final ExecutorService threadPool;
 
