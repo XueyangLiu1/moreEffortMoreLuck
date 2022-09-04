@@ -6,8 +6,6 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 public class ClientCommunicator {
-    final String serverHostname;
-    final int serverPort;
     private Socket socket;
     private BufferedReader br;
     private BufferedWriter bw;
@@ -17,25 +15,14 @@ public class ClientCommunicator {
     /**
      * The constructor of the ClientSocket
      */
-    public ClientCommunicator(String hostname, int port){
-        this.serverHostname = hostname;
-        this.serverPort = port;
-        initSocket(hostname, port);
-    }
-
-    /**
-     * Initiate the socket and connect to the server
-     * @param hostname server's hostname
-     * @param port server's port number
-     */
-    private void initSocket(String hostname, int port) {
-        try {
-            this.socket = new Socket(hostname, port);
+    public ClientCommunicator(Socket socket){
+        this.socket = socket;
+        try{
             this.bw = new BufferedWriter(new OutputStreamWriter(this.socket.getOutputStream()));
             this.br = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
-            logger.info(String.format("Successfully connected to %s:%d",hostname,port));
-        } catch (IOException e) {
-            logger.error("Failed to connect to server.");
+            logger.info("Succeed to get input and output from socket connection");
+        }catch(IOException e) {
+            logger.error("Failed to get input and output from socket connection");
         }
     }
 
