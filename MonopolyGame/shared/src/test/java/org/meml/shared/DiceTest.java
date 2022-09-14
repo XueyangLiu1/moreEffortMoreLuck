@@ -1,7 +1,9 @@
-package org.meml.client;
+package org.meml.shared;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.meml.shared.Dice;
+import org.meml.shared.SetOfDices;
 
 import java.io.BufferedReader;
 import java.io.IOException;
