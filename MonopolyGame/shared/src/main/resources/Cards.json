@@ -1,0 +1,66 @@
+{
+  "Experience": [
+    {
+      "name": "Move one space",
+      "number": 3,
+      "usage": "Skip rolling the dice, move one space forward. Can be used once every turn. Cannot be exchanged or traded."
+    },
+    {
+      "name": "Move two space",
+      "number": 3,
+      "usage": "Skip rolling the dice, move two space forward. Can be used once every turn. Cannot be exchanged or traded."
+    },
+    {
+      "name": "Move three space",
+      "number": 3,
+      "usage": "Skip rolling the dice, move three space forward. Can be used once every turn. Cannot be exchanged or traded."
+    }
+  ],
+  "Chance": [
+    {
+      "name": "Sailing",
+      "number": 1,
+      "usage": "Skip rolling the dice, move directly to Sailing space. Must be qualified to enter Sailing path."
+    },
+    {
+      "name": "Mining",
+      "number": 1,
+      "usage": "Skip rolling the dice, move directly to Mining space. Must be qualified to enter Mining path."
+    },
+    {
+      "name": "Exploring Mars",
+      "number": 1,
+      "usage": "Skip rolling the dice, move directly to Exploring Mars space. Must be qualified to enter Exploring Mars path."
+    },
+    {
+      "name": "Move one space",
+      "number": 1,
+      "usage": "Skip rolling the dice, move one space forward. Can be used once every turn. Cannot be exchanged or traded."
+    },
+    {
+      "name": "Move two space",
+      "number": 1,
+      "usage": "Skip rolling the dice, move two space forward. Can be used once every turn. Cannot be exchanged or traded."
+    },
+    {
+      "name": "Move three space",
+      "number": 1,
+      "usage": "Skip rolling the dice, move three space forward. Can be used once every turn. Cannot be exchanged or traded."
+    },
+    {
+      "name": "Move one space",
+      "number": 1,
+      "usage": "Skip rolling the dice, move one space forward. Can be used once every turn. Cannot be exchanged or traded."
+    },
+    {
+      "name": "Move two space",
+      "number": 1,
+      "usage": "Skip rolling the dice, move two space forward. Can be used once every turn. Cannot be exchanged or traded."
+    },
+    {
+      "name": "Move three space",
+      "number": 1,
+      "usage": "Skip rolling the dice, move three space forward. Can be used once every turn. Cannot be exchanged or traded."
+    }
+  ]
+}

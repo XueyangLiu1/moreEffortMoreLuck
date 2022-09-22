@@ -1,4 +1,4 @@
-package org.meml.shared;
+package org.meml.shared.dice;
 
 import org.junit.Assert;
 import org.junit.Test;
