@@ -1,35 +1,21 @@
 package org.meml.shared.card;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Random;
 
 /**
- * A templated class, perform the following operations on the type of objects:
+ * A templated interface, perform the following operations on T type of objects:
  *   shuffle, draw, refill
  * @param <T>
  */
-public class Deck<T> {
+public interface Deck<T> {
 
-    private final List<T> cardList;
+    void shuffle();
 
-    public Deck(List<T> objs) {
-        cardList = new LinkedList<>(objs);
-    }
+    T draw();
 
-    private void shuffle() {
-        Collections.shuffle(cardList);
-    }
+    void insert(T data);
 
-    public T draw() {
-        if (cardList.isEmpty()) {
-            return null;
-        }
-        Random rand = new Random(System.currentTimeMillis());
-        int drawIndex = rand.nextInt(cardList.size());
-        return cardList.remove(drawIndex);
-    }
-
-    public void refill(T obj) {
-        cardList.add(obj);
-        shuffle();
-    }
+    void insertAll(Collection<T> data);
 }
