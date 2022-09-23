@@ -11,7 +11,7 @@ public class MonopolyDeckV1<Card> implements Deck<Card>{
     private final List<Card> cardList;
 
     public MonopolyDeckV1(Collection<Card> objs) {
-        cardList = new LinkedList<>(objs);
+        cardList = new ArrayList<>(objs);
     }
 
     public void shuffle() {
