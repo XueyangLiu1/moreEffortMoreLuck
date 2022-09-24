@@ -10,8 +10,8 @@ public class MonopolyDeckV1<Card> implements Deck<Card>{
 
     private final List<Card> cardList;
 
-    public MonopolyDeckV1(Collection<Card> objs) {
-        cardList = new ArrayList<>(objs);
+    public MonopolyDeckV1(Collection<Card> cards) {
+        cardList = new ArrayList<>(cards);
     }
 
     public void shuffle() {
