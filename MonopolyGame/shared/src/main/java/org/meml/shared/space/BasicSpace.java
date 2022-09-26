@@ -9,6 +9,7 @@ public class BasicSpace {
     private BasicSpace nextSpace;
     private String title;
     private String detail;
+
     public BasicSpace(Board board, String title, String detail) {
         this.board = board;
         this.title = title;
