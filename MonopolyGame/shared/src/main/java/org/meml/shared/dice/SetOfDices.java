@@ -1,8 +1,7 @@
-package org.meml.client;
+package org.meml.shared.dice;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.TreeMap;
 
 public class SetOfDices {
