@@ -1,9 +1,25 @@
 syntax = "proto3";
 
+// ************************Basic round************************
+message RoundStartInform {
+    int32 player_index = 1;
+    int32 round_num = 2;
+}
+
+message RollDiceResponse {
+    int32 player_index = 1;
+    int32 roll_result = 2;
+}
+
 // update the player with the latest board situation
 message BoardUpdate {
     int32 player_index = 1;
     string board_json = 2;
+}
+
+message RoundCommitAck {
+    int32 player_index = 1;
+    int32 round_num = 2;
 }
 
 // ************************Transaction related************************
