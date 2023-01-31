@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 // ************************Basic round************************
+// ack the RoundStartInform
 message RoundStartAck {
     int32 player_index = 1;
     int32 round_num = 2;
@@ -16,6 +17,7 @@ message BoardUpdateRequest {
     int32 player_index = 1;
 }
 
+// commit the current round
 message RoundCommitRequest {
     int32 player_index = 1;
     int32 round_num = 2;

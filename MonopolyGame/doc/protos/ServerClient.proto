@@ -1,11 +1,13 @@
 syntax = "proto3";
 
 // ************************Basic round************************
+// inform the player for his/her round
 message RoundStartInform {
     int32 player_index = 1;
     int32 round_num = 2;
 }
 
+// reply the RollDiceRequest with a roll result
 message RollDiceResponse {
     int32 player_index = 1;
     int32 roll_result = 2;
@@ -17,6 +19,7 @@ message BoardUpdate {
     string board_json = 2;
 }
 
+// ack the RoundCommitRequest
 message RoundCommitAck {
     int32 player_index = 1;
     int32 round_num = 2;
