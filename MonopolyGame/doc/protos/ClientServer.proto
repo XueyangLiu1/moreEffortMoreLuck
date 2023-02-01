@@ -1,5 +1,33 @@
 syntax = "proto3";
 
+// ************************Constants************************
+enum Status {
+    SUCCESS = 0;
+    FAILURE = 1;
+}
+
+// ************************Pregame Preparation************************
+// ask server to create a room for a number of players
+message RoomCreateRequest {
+    string player_name = 1;
+    int32 room_capacity = 2;
+}
+
+// send room code to join the room
+message RoomJoinRequest {
+    string player_name = 1;
+    string room_code = 2;
+}
+
+// send to start the game, everyone in room should send
+message GameStartRequest {
+    int32 player_index = 1;
+    // set personal goals
+    int32 joy_goal = 2;
+    int32 wealth_goal = 3;
+    int32 fame_goal = 4;
+}
+
 // ************************Basic round************************
 // ack the RoundStartInform
 message RoundStartAck {

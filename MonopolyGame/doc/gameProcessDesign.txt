@@ -1,0 +1,18 @@
+GamePreparation:
+
+1. One client send RoomCreateRequest to server, with player number.
+
+2. Server respond with success or failure. If success, respond room code.(6-digit number mixed with letter)
+when a client already owns a room and the new room requested is for same number of people, decline.
+
+3. Other player send RoomJoinRequest. server verify, room exist? room full? name exist? 
+
+4. Server collects player name, put into dict, key: 0~n player_index, value: Pair<name, ipaddress>
+Server respond with RoomJoinResponse, and assigned player index.
+
+Only when no one in the room, destroy the room.
+
+5. each client send GameStartRequest, when everyone has sent, server announce game start.
+
+4. Server host rounds based on player order.
+
