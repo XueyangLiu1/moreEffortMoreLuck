@@ -1,5 +1,12 @@
 syntax = "proto3";
 
+// ************************Message Type************************
+message CSmsg {
+    repeated RoomCreateRequest roomCreateRequest = 1;
+    repeated RoomJoinRequest roomJoinRequest = 2;
+    repeated GameStartRequest gameStartRequest = 3;
+}
+
 // ************************Constants************************
 enum Status {
     SUCCESS = 0;
@@ -28,45 +35,45 @@ message GameStartRequest {
     int32 fame_goal = 4;
 }
 
-// ************************Basic round************************
-// ack the RoundStartInform
-message RoundStartAck {
-    int32 player_index = 1;
-    int32 round_num = 2;
-}
+// // ************************Basic round************************
+// // ack the RoundStartInform
+// message RoundStartAck {
+//     int32 player_index = 1;
+//     int32 round_num = 2;
+// }
 
-// ask the server to roll dice
-message RollDiceRequest {
-    int32 player_index = 1;
-}
+// // ask the server to roll dice
+// message RollDiceRequest {
+//     int32 player_index = 1;
+// }
 
-// ask the server for board update, use only when needed
-message BoardUpdateRequest {
-    int32 player_index = 1;
-}
+// // ask the server for board update, use only when needed
+// message BoardUpdateRequest {
+//     int32 player_index = 1;
+// }
 
-// commit the current round
-message RoundCommitRequest {
-    int32 player_index = 1;
-    int32 round_num = 2;
-}
+// // commit the current round
+// message RoundCommitRequest {
+//     int32 player_index = 1;
+//     int32 round_num = 2;
+// }
 
-// ************************Transaction related************************
-// request a transaction with another player
-message TransactionRequest {
-    string transaction_identifier = 1;// sender#receiver#UTC-Timestamp
-    int32 sender_player_index = 1;
-    int32 receiver_player_index = 2;
-    string sender_item = 3;
-    string receiver_item = 4;
-}
+// // ************************Transaction related************************
+// // request a transaction with another player
+// message TransactionRequest {
+//     string transaction_identifier = 1;// sender#receiver#UTC-Timestamp
+//     int32 sender_player_index = 2;
+//     int32 receiver_player_index = 3;
+//     string sender_item = 4;
+//     string receiver_item = 5;
+// }
 
-// accept a transaction from another player
-message TransactionAccept {
-    string transaction_identifier = 1;
-}
+// // accept a transaction from another player
+// message TransactionAccept {
+//     string transaction_identifier = 1;
+// }
 
-// reject a transaction from another player
-message TransactionReject {
-    string transaction_identifier = 1;
-}
+// // reject a transaction from another player
+// message TransactionReject {
+//     string transaction_identifier = 1;
+// }

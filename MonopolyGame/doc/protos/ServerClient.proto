@@ -1,5 +1,14 @@
 syntax = "proto3";
 
+// ************************Message Type************************
+message SCmsg {
+    repeated RoomCreateResponse roomCreateResponse = 1;
+    repeated RoomJoinResponse roomJoinResponse = 2;
+    repeated GameStartResponse gameStartResponse = 3;
+    repeated RoomStatusInform roomStatusInform = 4;
+    repeated GameStartInform gameStartInform = 5;
+}
+
 // ************************Constants************************
 enum Status {
     SUCCESS = 0;
@@ -48,47 +57,47 @@ message RoomStatusInform {
 message GameStartInform {
 }
 
-// ************************Basic round************************
-// inform the player for his/her round
-message RoundStartInform {
-    int32 player_index = 1;
-    int32 round_num = 2;
-}
+// // ************************Basic round************************
+// // inform the player for his/her round
+// message RoundStartInform {
+//     int32 player_index = 1;
+//     int32 round_num = 2;
+// }
 
-// reply the RollDiceRequest with a roll result
-message RollDiceResponse {
-    int32 player_index = 1;
-    int32 roll_result = 2;
-}
+// // reply the RollDiceRequest with a roll result
+// message RollDiceResponse {
+//     int32 player_index = 1;
+//     int32 roll_result = 2;
+// }
 
-// update the player with the latest board situation
-message BoardUpdate {
-    int32 player_index = 1;
-    string board_json = 2;
-}
+// // update the player with the latest board situation
+// message BoardUpdate {
+//     int32 player_index = 1;
+//     string board_json = 2;
+// }
 
-// ack the RoundCommitRequest
-message RoundCommitAck {
-    int32 player_index = 1;
-    int32 round_num = 2;
-}
+// // ack the RoundCommitRequest
+// message RoundCommitAck {
+//     int32 player_index = 1;
+//     int32 round_num = 2;
+// }
 
-// ************************Transaction related************************
-// inform the receiver about the transaction request
-message TransactionInform {
-    string transaction_identifier = 1;// sender#receiver#UTC-Timestamp
-    int32 sender_player_index = 2;
-    int32 receiver_player_index = 3;
-    string sender_item = 4;
-    string receiver_item = 5;
-}
+// // ************************Transaction related************************
+// // inform the receiver about the transaction request
+// message TransactionInform {
+//     string transaction_identifier = 1;// sender#receiver#UTC-Timestamp
+//     int32 sender_player_index = 2;
+//     int32 receiver_player_index = 3;
+//     string sender_item = 4;
+//     string receiver_item = 5;
+// }
 
-// send to both the requester and accepter when transaction is confirmed
-message TransactionConfirm {
-    string transaction_identifier = 1;
-}
+// // send to both the requester and accepter when transaction is confirmed
+// message TransactionConfirm {
+//     string transaction_identifier = 1;
+// }
 
-// send to both the requester and accepter when transaction is rejected
-message TransactionAbandon {
-    string transaction_identifier = 1;
-}
+// // send to both the requester and accepter when transaction is rejected
+// message TransactionAbandon {
+//     string transaction_identifier = 1;
+// }
