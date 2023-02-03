@@ -5,7 +5,9 @@ message CSmsg {
     repeated IdCreateRequest idCreateRequest = 1;
     repeated RoomCreateRequest roomCreateRequest = 2;
     repeated RoomJoinRequest roomJoinRequest = 3;
-    repeated GameStartRequest gameStartRequest = 4;
+    repeated JoinerReadyRequest joinerReadyRequest = 4;
+    repeated OwnerStartGameRequest ownerStartGameRequest = 5;
+    repeated RoomStatusRequest roomStatusRequest = 6;
 }
 
 // ************************Constants************************
@@ -31,9 +33,20 @@ message RoomJoinRequest {
     string room_code = 2;
 }
 
-// send to start the game, everyone in room should send
-message GameStartRequest {
-    int32 player_name = 1;
+// send to get ready for the game, joiners in room should send
+message JoinerReadyRequest {
+    string player_name = 1;
+    string room_code = 2;
+}
+
+// send to start the game, owners can send only others all ready
+message OwnerStartGameRequest {
+    string player_name = 1;
+    string room_code = 2;
+}
+
+message RoomStatusRequest {
+    string player_name = 1;
     string room_code = 2;
 }
 

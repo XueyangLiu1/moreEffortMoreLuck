@@ -203,73 +203,97 @@ public final class ServerClient {
         int index);
 
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
-    java.util.List<ServerClient.GameStartResponse> 
-        getGameStartResponseList();
+    java.util.List<ServerClient.JoinerReadyResponse> 
+        getJoinerReadyResponseList();
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
-    ServerClient.GameStartResponse getGameStartResponse(int index);
+    ServerClient.JoinerReadyResponse getJoinerReadyResponse(int index);
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
-    int getGameStartResponseCount();
+    int getJoinerReadyResponseCount();
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
-    java.util.List<? extends ServerClient.GameStartResponseOrBuilder> 
-        getGameStartResponseOrBuilderList();
+    java.util.List<? extends ServerClient.JoinerReadyResponseOrBuilder> 
+        getJoinerReadyResponseOrBuilderList();
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
-    ServerClient.GameStartResponseOrBuilder getGameStartResponseOrBuilder(
+    ServerClient.JoinerReadyResponseOrBuilder getJoinerReadyResponseOrBuilder(
         int index);
 
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
-    java.util.List<ServerClient.RoomStatusInform> 
-        getRoomStatusInformList();
+    java.util.List<ServerClient.OwnerStartGameResponse> 
+        getOwnerStartGameResponseList();
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
-    ServerClient.RoomStatusInform getRoomStatusInform(int index);
+    ServerClient.OwnerStartGameResponse getOwnerStartGameResponse(int index);
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
-    int getRoomStatusInformCount();
+    int getOwnerStartGameResponseCount();
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
-    java.util.List<? extends ServerClient.RoomStatusInformOrBuilder> 
-        getRoomStatusInformOrBuilderList();
+    java.util.List<? extends ServerClient.OwnerStartGameResponseOrBuilder> 
+        getOwnerStartGameResponseOrBuilderList();
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
-    ServerClient.RoomStatusInformOrBuilder getRoomStatusInformOrBuilder(
+    ServerClient.OwnerStartGameResponseOrBuilder getOwnerStartGameResponseOrBuilder(
         int index);
 
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    java.util.List<ServerClient.RoomStatusResponse> 
+        getRoomStatusResponseList();
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    ServerClient.RoomStatusResponse getRoomStatusResponse(int index);
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    int getRoomStatusResponseCount();
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    java.util.List<? extends ServerClient.RoomStatusResponseOrBuilder> 
+        getRoomStatusResponseOrBuilderList();
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    ServerClient.RoomStatusResponseOrBuilder getRoomStatusResponseOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     java.util.List<ServerClient.GameStartInform> 
         getGameStartInformList();
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     ServerClient.GameStartInform getGameStartInform(int index);
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     int getGameStartInformCount();
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     java.util.List<? extends ServerClient.GameStartInformOrBuilder> 
         getGameStartInformOrBuilderList();
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     ServerClient.GameStartInformOrBuilder getGameStartInformOrBuilder(
         int index);
@@ -294,8 +318,9 @@ public final class ServerClient {
       idCreateResponse_ = java.util.Collections.emptyList();
       roomCreateResponse_ = java.util.Collections.emptyList();
       roomJoinResponse_ = java.util.Collections.emptyList();
-      gameStartResponse_ = java.util.Collections.emptyList();
-      roomStatusInform_ = java.util.Collections.emptyList();
+      joinerReadyResponse_ = java.util.Collections.emptyList();
+      ownerStartGameResponse_ = java.util.Collections.emptyList();
+      roomStatusResponse_ = java.util.Collections.emptyList();
       gameStartInform_ = java.util.Collections.emptyList();
     }
 
@@ -447,100 +472,141 @@ public final class ServerClient {
       return roomJoinResponse_.get(index);
     }
 
-    public static final int GAMESTARTRESPONSE_FIELD_NUMBER = 4;
+    public static final int JOINERREADYRESPONSE_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private java.util.List<ServerClient.GameStartResponse> gameStartResponse_;
+    private java.util.List<ServerClient.JoinerReadyResponse> joinerReadyResponse_;
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<ServerClient.GameStartResponse> getGameStartResponseList() {
-      return gameStartResponse_;
+    public java.util.List<ServerClient.JoinerReadyResponse> getJoinerReadyResponseList() {
+      return joinerReadyResponse_;
     }
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends ServerClient.GameStartResponseOrBuilder> 
-        getGameStartResponseOrBuilderList() {
-      return gameStartResponse_;
+    public java.util.List<? extends ServerClient.JoinerReadyResponseOrBuilder> 
+        getJoinerReadyResponseOrBuilderList() {
+      return joinerReadyResponse_;
     }
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
     @java.lang.Override
-    public int getGameStartResponseCount() {
-      return gameStartResponse_.size();
+    public int getJoinerReadyResponseCount() {
+      return joinerReadyResponse_.size();
     }
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
     @java.lang.Override
-    public ServerClient.GameStartResponse getGameStartResponse(int index) {
-      return gameStartResponse_.get(index);
+    public ServerClient.JoinerReadyResponse getJoinerReadyResponse(int index) {
+      return joinerReadyResponse_.get(index);
     }
     /**
-     * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+     * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
      */
     @java.lang.Override
-    public ServerClient.GameStartResponseOrBuilder getGameStartResponseOrBuilder(
+    public ServerClient.JoinerReadyResponseOrBuilder getJoinerReadyResponseOrBuilder(
         int index) {
-      return gameStartResponse_.get(index);
+      return joinerReadyResponse_.get(index);
     }
 
-    public static final int ROOMSTATUSINFORM_FIELD_NUMBER = 5;
+    public static final int OWNERSTARTGAMERESPONSE_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
-    private java.util.List<ServerClient.RoomStatusInform> roomStatusInform_;
+    private java.util.List<ServerClient.OwnerStartGameResponse> ownerStartGameResponse_;
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
     @java.lang.Override
-    public java.util.List<ServerClient.RoomStatusInform> getRoomStatusInformList() {
-      return roomStatusInform_;
+    public java.util.List<ServerClient.OwnerStartGameResponse> getOwnerStartGameResponseList() {
+      return ownerStartGameResponse_;
     }
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends ServerClient.RoomStatusInformOrBuilder> 
-        getRoomStatusInformOrBuilderList() {
-      return roomStatusInform_;
+    public java.util.List<? extends ServerClient.OwnerStartGameResponseOrBuilder> 
+        getOwnerStartGameResponseOrBuilderList() {
+      return ownerStartGameResponse_;
     }
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
     @java.lang.Override
-    public int getRoomStatusInformCount() {
-      return roomStatusInform_.size();
+    public int getOwnerStartGameResponseCount() {
+      return ownerStartGameResponse_.size();
     }
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
     @java.lang.Override
-    public ServerClient.RoomStatusInform getRoomStatusInform(int index) {
-      return roomStatusInform_.get(index);
+    public ServerClient.OwnerStartGameResponse getOwnerStartGameResponse(int index) {
+      return ownerStartGameResponse_.get(index);
     }
     /**
-     * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+     * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
      */
     @java.lang.Override
-    public ServerClient.RoomStatusInformOrBuilder getRoomStatusInformOrBuilder(
+    public ServerClient.OwnerStartGameResponseOrBuilder getOwnerStartGameResponseOrBuilder(
         int index) {
-      return roomStatusInform_.get(index);
+      return ownerStartGameResponse_.get(index);
     }
 
-    public static final int GAMESTARTINFORM_FIELD_NUMBER = 6;
+    public static final int ROOMSTATUSRESPONSE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<ServerClient.RoomStatusResponse> roomStatusResponse_;
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ServerClient.RoomStatusResponse> getRoomStatusResponseList() {
+      return roomStatusResponse_;
+    }
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ServerClient.RoomStatusResponseOrBuilder> 
+        getRoomStatusResponseOrBuilderList() {
+      return roomStatusResponse_;
+    }
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    @java.lang.Override
+    public int getRoomStatusResponseCount() {
+      return roomStatusResponse_.size();
+    }
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    @java.lang.Override
+    public ServerClient.RoomStatusResponse getRoomStatusResponse(int index) {
+      return roomStatusResponse_.get(index);
+    }
+    /**
+     * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+     */
+    @java.lang.Override
+    public ServerClient.RoomStatusResponseOrBuilder getRoomStatusResponseOrBuilder(
+        int index) {
+      return roomStatusResponse_.get(index);
+    }
+
+    public static final int GAMESTARTINFORM_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private java.util.List<ServerClient.GameStartInform> gameStartInform_;
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     @java.lang.Override
     public java.util.List<ServerClient.GameStartInform> getGameStartInformList() {
       return gameStartInform_;
     }
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     @java.lang.Override
     public java.util.List<? extends ServerClient.GameStartInformOrBuilder> 
@@ -548,21 +614,21 @@ public final class ServerClient {
       return gameStartInform_;
     }
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     @java.lang.Override
     public int getGameStartInformCount() {
       return gameStartInform_.size();
     }
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     @java.lang.Override
     public ServerClient.GameStartInform getGameStartInform(int index) {
       return gameStartInform_.get(index);
     }
     /**
-     * <code>repeated .GameStartInform gameStartInform = 6;</code>
+     * <code>repeated .GameStartInform gameStartInform = 7;</code>
      */
     @java.lang.Override
     public ServerClient.GameStartInformOrBuilder getGameStartInformOrBuilder(
@@ -593,14 +659,17 @@ public final class ServerClient {
       for (int i = 0; i < roomJoinResponse_.size(); i++) {
         output.writeMessage(3, roomJoinResponse_.get(i));
       }
-      for (int i = 0; i < gameStartResponse_.size(); i++) {
-        output.writeMessage(4, gameStartResponse_.get(i));
+      for (int i = 0; i < joinerReadyResponse_.size(); i++) {
+        output.writeMessage(4, joinerReadyResponse_.get(i));
       }
-      for (int i = 0; i < roomStatusInform_.size(); i++) {
-        output.writeMessage(5, roomStatusInform_.get(i));
+      for (int i = 0; i < ownerStartGameResponse_.size(); i++) {
+        output.writeMessage(5, ownerStartGameResponse_.get(i));
+      }
+      for (int i = 0; i < roomStatusResponse_.size(); i++) {
+        output.writeMessage(6, roomStatusResponse_.get(i));
       }
       for (int i = 0; i < gameStartInform_.size(); i++) {
-        output.writeMessage(6, gameStartInform_.get(i));
+        output.writeMessage(7, gameStartInform_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -623,17 +692,21 @@ public final class ServerClient {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, roomJoinResponse_.get(i));
       }
-      for (int i = 0; i < gameStartResponse_.size(); i++) {
+      for (int i = 0; i < joinerReadyResponse_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, gameStartResponse_.get(i));
+          .computeMessageSize(4, joinerReadyResponse_.get(i));
       }
-      for (int i = 0; i < roomStatusInform_.size(); i++) {
+      for (int i = 0; i < ownerStartGameResponse_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, roomStatusInform_.get(i));
+          .computeMessageSize(5, ownerStartGameResponse_.get(i));
+      }
+      for (int i = 0; i < roomStatusResponse_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, roomStatusResponse_.get(i));
       }
       for (int i = 0; i < gameStartInform_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, gameStartInform_.get(i));
+          .computeMessageSize(7, gameStartInform_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -656,10 +729,12 @@ public final class ServerClient {
           .equals(other.getRoomCreateResponseList())) return false;
       if (!getRoomJoinResponseList()
           .equals(other.getRoomJoinResponseList())) return false;
-      if (!getGameStartResponseList()
-          .equals(other.getGameStartResponseList())) return false;
-      if (!getRoomStatusInformList()
-          .equals(other.getRoomStatusInformList())) return false;
+      if (!getJoinerReadyResponseList()
+          .equals(other.getJoinerReadyResponseList())) return false;
+      if (!getOwnerStartGameResponseList()
+          .equals(other.getOwnerStartGameResponseList())) return false;
+      if (!getRoomStatusResponseList()
+          .equals(other.getRoomStatusResponseList())) return false;
       if (!getGameStartInformList()
           .equals(other.getGameStartInformList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -685,13 +760,17 @@ public final class ServerClient {
         hash = (37 * hash) + ROOMJOINRESPONSE_FIELD_NUMBER;
         hash = (53 * hash) + getRoomJoinResponseList().hashCode();
       }
-      if (getGameStartResponseCount() > 0) {
-        hash = (37 * hash) + GAMESTARTRESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + getGameStartResponseList().hashCode();
+      if (getJoinerReadyResponseCount() > 0) {
+        hash = (37 * hash) + JOINERREADYRESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getJoinerReadyResponseList().hashCode();
       }
-      if (getRoomStatusInformCount() > 0) {
-        hash = (37 * hash) + ROOMSTATUSINFORM_FIELD_NUMBER;
-        hash = (53 * hash) + getRoomStatusInformList().hashCode();
+      if (getOwnerStartGameResponseCount() > 0) {
+        hash = (37 * hash) + OWNERSTARTGAMERESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getOwnerStartGameResponseList().hashCode();
+      }
+      if (getRoomStatusResponseCount() > 0) {
+        hash = (37 * hash) + ROOMSTATUSRESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getRoomStatusResponseList().hashCode();
       }
       if (getGameStartInformCount() > 0) {
         hash = (37 * hash) + GAMESTARTINFORM_FIELD_NUMBER;
@@ -851,27 +930,34 @@ public final class ServerClient {
           roomJoinResponseBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (gameStartResponseBuilder_ == null) {
-          gameStartResponse_ = java.util.Collections.emptyList();
+        if (joinerReadyResponseBuilder_ == null) {
+          joinerReadyResponse_ = java.util.Collections.emptyList();
         } else {
-          gameStartResponse_ = null;
-          gameStartResponseBuilder_.clear();
+          joinerReadyResponse_ = null;
+          joinerReadyResponseBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
-        if (roomStatusInformBuilder_ == null) {
-          roomStatusInform_ = java.util.Collections.emptyList();
+        if (ownerStartGameResponseBuilder_ == null) {
+          ownerStartGameResponse_ = java.util.Collections.emptyList();
         } else {
-          roomStatusInform_ = null;
-          roomStatusInformBuilder_.clear();
+          ownerStartGameResponse_ = null;
+          ownerStartGameResponseBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (roomStatusResponseBuilder_ == null) {
+          roomStatusResponse_ = java.util.Collections.emptyList();
+        } else {
+          roomStatusResponse_ = null;
+          roomStatusResponseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (gameStartInformBuilder_ == null) {
           gameStartInform_ = java.util.Collections.emptyList();
         } else {
           gameStartInform_ = null;
           gameStartInformBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -932,28 +1018,37 @@ public final class ServerClient {
         } else {
           result.roomJoinResponse_ = roomJoinResponseBuilder_.build();
         }
-        if (gameStartResponseBuilder_ == null) {
+        if (joinerReadyResponseBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0)) {
-            gameStartResponse_ = java.util.Collections.unmodifiableList(gameStartResponse_);
+            joinerReadyResponse_ = java.util.Collections.unmodifiableList(joinerReadyResponse_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
-          result.gameStartResponse_ = gameStartResponse_;
+          result.joinerReadyResponse_ = joinerReadyResponse_;
         } else {
-          result.gameStartResponse_ = gameStartResponseBuilder_.build();
+          result.joinerReadyResponse_ = joinerReadyResponseBuilder_.build();
         }
-        if (roomStatusInformBuilder_ == null) {
+        if (ownerStartGameResponseBuilder_ == null) {
           if (((bitField0_ & 0x00000010) != 0)) {
-            roomStatusInform_ = java.util.Collections.unmodifiableList(roomStatusInform_);
+            ownerStartGameResponse_ = java.util.Collections.unmodifiableList(ownerStartGameResponse_);
             bitField0_ = (bitField0_ & ~0x00000010);
           }
-          result.roomStatusInform_ = roomStatusInform_;
+          result.ownerStartGameResponse_ = ownerStartGameResponse_;
         } else {
-          result.roomStatusInform_ = roomStatusInformBuilder_.build();
+          result.ownerStartGameResponse_ = ownerStartGameResponseBuilder_.build();
+        }
+        if (roomStatusResponseBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            roomStatusResponse_ = java.util.Collections.unmodifiableList(roomStatusResponse_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.roomStatusResponse_ = roomStatusResponse_;
+        } else {
+          result.roomStatusResponse_ = roomStatusResponseBuilder_.build();
         }
         if (gameStartInformBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             gameStartInform_ = java.util.Collections.unmodifiableList(gameStartInform_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.gameStartInform_ = gameStartInform_;
         } else {
@@ -1087,55 +1182,81 @@ public final class ServerClient {
             }
           }
         }
-        if (gameStartResponseBuilder_ == null) {
-          if (!other.gameStartResponse_.isEmpty()) {
-            if (gameStartResponse_.isEmpty()) {
-              gameStartResponse_ = other.gameStartResponse_;
+        if (joinerReadyResponseBuilder_ == null) {
+          if (!other.joinerReadyResponse_.isEmpty()) {
+            if (joinerReadyResponse_.isEmpty()) {
+              joinerReadyResponse_ = other.joinerReadyResponse_;
               bitField0_ = (bitField0_ & ~0x00000008);
             } else {
-              ensureGameStartResponseIsMutable();
-              gameStartResponse_.addAll(other.gameStartResponse_);
+              ensureJoinerReadyResponseIsMutable();
+              joinerReadyResponse_.addAll(other.joinerReadyResponse_);
             }
             onChanged();
           }
         } else {
-          if (!other.gameStartResponse_.isEmpty()) {
-            if (gameStartResponseBuilder_.isEmpty()) {
-              gameStartResponseBuilder_.dispose();
-              gameStartResponseBuilder_ = null;
-              gameStartResponse_ = other.gameStartResponse_;
+          if (!other.joinerReadyResponse_.isEmpty()) {
+            if (joinerReadyResponseBuilder_.isEmpty()) {
+              joinerReadyResponseBuilder_.dispose();
+              joinerReadyResponseBuilder_ = null;
+              joinerReadyResponse_ = other.joinerReadyResponse_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              gameStartResponseBuilder_ = 
+              joinerReadyResponseBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getGameStartResponseFieldBuilder() : null;
+                   getJoinerReadyResponseFieldBuilder() : null;
             } else {
-              gameStartResponseBuilder_.addAllMessages(other.gameStartResponse_);
+              joinerReadyResponseBuilder_.addAllMessages(other.joinerReadyResponse_);
             }
           }
         }
-        if (roomStatusInformBuilder_ == null) {
-          if (!other.roomStatusInform_.isEmpty()) {
-            if (roomStatusInform_.isEmpty()) {
-              roomStatusInform_ = other.roomStatusInform_;
+        if (ownerStartGameResponseBuilder_ == null) {
+          if (!other.ownerStartGameResponse_.isEmpty()) {
+            if (ownerStartGameResponse_.isEmpty()) {
+              ownerStartGameResponse_ = other.ownerStartGameResponse_;
               bitField0_ = (bitField0_ & ~0x00000010);
             } else {
-              ensureRoomStatusInformIsMutable();
-              roomStatusInform_.addAll(other.roomStatusInform_);
+              ensureOwnerStartGameResponseIsMutable();
+              ownerStartGameResponse_.addAll(other.ownerStartGameResponse_);
             }
             onChanged();
           }
         } else {
-          if (!other.roomStatusInform_.isEmpty()) {
-            if (roomStatusInformBuilder_.isEmpty()) {
-              roomStatusInformBuilder_.dispose();
-              roomStatusInformBuilder_ = null;
-              roomStatusInform_ = other.roomStatusInform_;
+          if (!other.ownerStartGameResponse_.isEmpty()) {
+            if (ownerStartGameResponseBuilder_.isEmpty()) {
+              ownerStartGameResponseBuilder_.dispose();
+              ownerStartGameResponseBuilder_ = null;
+              ownerStartGameResponse_ = other.ownerStartGameResponse_;
               bitField0_ = (bitField0_ & ~0x00000010);
-              roomStatusInformBuilder_ = 
+              ownerStartGameResponseBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRoomStatusInformFieldBuilder() : null;
+                   getOwnerStartGameResponseFieldBuilder() : null;
             } else {
-              roomStatusInformBuilder_.addAllMessages(other.roomStatusInform_);
+              ownerStartGameResponseBuilder_.addAllMessages(other.ownerStartGameResponse_);
+            }
+          }
+        }
+        if (roomStatusResponseBuilder_ == null) {
+          if (!other.roomStatusResponse_.isEmpty()) {
+            if (roomStatusResponse_.isEmpty()) {
+              roomStatusResponse_ = other.roomStatusResponse_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureRoomStatusResponseIsMutable();
+              roomStatusResponse_.addAll(other.roomStatusResponse_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.roomStatusResponse_.isEmpty()) {
+            if (roomStatusResponseBuilder_.isEmpty()) {
+              roomStatusResponseBuilder_.dispose();
+              roomStatusResponseBuilder_ = null;
+              roomStatusResponse_ = other.roomStatusResponse_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              roomStatusResponseBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRoomStatusResponseFieldBuilder() : null;
+            } else {
+              roomStatusResponseBuilder_.addAllMessages(other.roomStatusResponse_);
             }
           }
         }
@@ -1143,7 +1264,7 @@ public final class ServerClient {
           if (!other.gameStartInform_.isEmpty()) {
             if (gameStartInform_.isEmpty()) {
               gameStartInform_ = other.gameStartInform_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureGameStartInformIsMutable();
               gameStartInform_.addAll(other.gameStartInform_);
@@ -1156,7 +1277,7 @@ public final class ServerClient {
               gameStartInformBuilder_.dispose();
               gameStartInformBuilder_ = null;
               gameStartInform_ = other.gameStartInform_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               gameStartInformBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getGameStartInformFieldBuilder() : null;
@@ -1231,32 +1352,45 @@ public final class ServerClient {
                 break;
               } // case 26
               case 34: {
-                ServerClient.GameStartResponse m =
+                ServerClient.JoinerReadyResponse m =
                     input.readMessage(
-                        ServerClient.GameStartResponse.parser(),
+                        ServerClient.JoinerReadyResponse.parser(),
                         extensionRegistry);
-                if (gameStartResponseBuilder_ == null) {
-                  ensureGameStartResponseIsMutable();
-                  gameStartResponse_.add(m);
+                if (joinerReadyResponseBuilder_ == null) {
+                  ensureJoinerReadyResponseIsMutable();
+                  joinerReadyResponse_.add(m);
                 } else {
-                  gameStartResponseBuilder_.addMessage(m);
+                  joinerReadyResponseBuilder_.addMessage(m);
                 }
                 break;
               } // case 34
               case 42: {
-                ServerClient.RoomStatusInform m =
+                ServerClient.OwnerStartGameResponse m =
                     input.readMessage(
-                        ServerClient.RoomStatusInform.parser(),
+                        ServerClient.OwnerStartGameResponse.parser(),
                         extensionRegistry);
-                if (roomStatusInformBuilder_ == null) {
-                  ensureRoomStatusInformIsMutable();
-                  roomStatusInform_.add(m);
+                if (ownerStartGameResponseBuilder_ == null) {
+                  ensureOwnerStartGameResponseIsMutable();
+                  ownerStartGameResponse_.add(m);
                 } else {
-                  roomStatusInformBuilder_.addMessage(m);
+                  ownerStartGameResponseBuilder_.addMessage(m);
                 }
                 break;
               } // case 42
               case 50: {
+                ServerClient.RoomStatusResponse m =
+                    input.readMessage(
+                        ServerClient.RoomStatusResponse.parser(),
+                        extensionRegistry);
+                if (roomStatusResponseBuilder_ == null) {
+                  ensureRoomStatusResponseIsMutable();
+                  roomStatusResponse_.add(m);
+                } else {
+                  roomStatusResponseBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
                 ServerClient.GameStartInform m =
                     input.readMessage(
                         ServerClient.GameStartInform.parser(),
@@ -1268,7 +1402,7 @@ public final class ServerClient {
                   gameStartInformBuilder_.addMessage(m);
                 }
                 break;
-              } // case 50
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2006,492 +2140,732 @@ public final class ServerClient {
         return roomJoinResponseBuilder_;
       }
 
-      private java.util.List<ServerClient.GameStartResponse> gameStartResponse_ =
+      private java.util.List<ServerClient.JoinerReadyResponse> joinerReadyResponse_ =
         java.util.Collections.emptyList();
-      private void ensureGameStartResponseIsMutable() {
+      private void ensureJoinerReadyResponseIsMutable() {
         if (!((bitField0_ & 0x00000008) != 0)) {
-          gameStartResponse_ = new java.util.ArrayList<ServerClient.GameStartResponse>(gameStartResponse_);
+          joinerReadyResponse_ = new java.util.ArrayList<ServerClient.JoinerReadyResponse>(joinerReadyResponse_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ServerClient.GameStartResponse, ServerClient.GameStartResponse.Builder, ServerClient.GameStartResponseOrBuilder> gameStartResponseBuilder_;
+          ServerClient.JoinerReadyResponse, ServerClient.JoinerReadyResponse.Builder, ServerClient.JoinerReadyResponseOrBuilder> joinerReadyResponseBuilder_;
 
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public java.util.List<ServerClient.GameStartResponse> getGameStartResponseList() {
-        if (gameStartResponseBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(gameStartResponse_);
+      public java.util.List<ServerClient.JoinerReadyResponse> getJoinerReadyResponseList() {
+        if (joinerReadyResponseBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(joinerReadyResponse_);
         } else {
-          return gameStartResponseBuilder_.getMessageList();
+          return joinerReadyResponseBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public int getGameStartResponseCount() {
-        if (gameStartResponseBuilder_ == null) {
-          return gameStartResponse_.size();
+      public int getJoinerReadyResponseCount() {
+        if (joinerReadyResponseBuilder_ == null) {
+          return joinerReadyResponse_.size();
         } else {
-          return gameStartResponseBuilder_.getCount();
+          return joinerReadyResponseBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public ServerClient.GameStartResponse getGameStartResponse(int index) {
-        if (gameStartResponseBuilder_ == null) {
-          return gameStartResponse_.get(index);
+      public ServerClient.JoinerReadyResponse getJoinerReadyResponse(int index) {
+        if (joinerReadyResponseBuilder_ == null) {
+          return joinerReadyResponse_.get(index);
         } else {
-          return gameStartResponseBuilder_.getMessage(index);
+          return joinerReadyResponseBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder setGameStartResponse(
-          int index, ServerClient.GameStartResponse value) {
-        if (gameStartResponseBuilder_ == null) {
+      public Builder setJoinerReadyResponse(
+          int index, ServerClient.JoinerReadyResponse value) {
+        if (joinerReadyResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureGameStartResponseIsMutable();
-          gameStartResponse_.set(index, value);
+          ensureJoinerReadyResponseIsMutable();
+          joinerReadyResponse_.set(index, value);
           onChanged();
         } else {
-          gameStartResponseBuilder_.setMessage(index, value);
+          joinerReadyResponseBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder setGameStartResponse(
-          int index, ServerClient.GameStartResponse.Builder builderForValue) {
-        if (gameStartResponseBuilder_ == null) {
-          ensureGameStartResponseIsMutable();
-          gameStartResponse_.set(index, builderForValue.build());
+      public Builder setJoinerReadyResponse(
+          int index, ServerClient.JoinerReadyResponse.Builder builderForValue) {
+        if (joinerReadyResponseBuilder_ == null) {
+          ensureJoinerReadyResponseIsMutable();
+          joinerReadyResponse_.set(index, builderForValue.build());
           onChanged();
         } else {
-          gameStartResponseBuilder_.setMessage(index, builderForValue.build());
+          joinerReadyResponseBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder addGameStartResponse(ServerClient.GameStartResponse value) {
-        if (gameStartResponseBuilder_ == null) {
+      public Builder addJoinerReadyResponse(ServerClient.JoinerReadyResponse value) {
+        if (joinerReadyResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureGameStartResponseIsMutable();
-          gameStartResponse_.add(value);
+          ensureJoinerReadyResponseIsMutable();
+          joinerReadyResponse_.add(value);
           onChanged();
         } else {
-          gameStartResponseBuilder_.addMessage(value);
+          joinerReadyResponseBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder addGameStartResponse(
-          int index, ServerClient.GameStartResponse value) {
-        if (gameStartResponseBuilder_ == null) {
+      public Builder addJoinerReadyResponse(
+          int index, ServerClient.JoinerReadyResponse value) {
+        if (joinerReadyResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureGameStartResponseIsMutable();
-          gameStartResponse_.add(index, value);
+          ensureJoinerReadyResponseIsMutable();
+          joinerReadyResponse_.add(index, value);
           onChanged();
         } else {
-          gameStartResponseBuilder_.addMessage(index, value);
+          joinerReadyResponseBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder addGameStartResponse(
-          ServerClient.GameStartResponse.Builder builderForValue) {
-        if (gameStartResponseBuilder_ == null) {
-          ensureGameStartResponseIsMutable();
-          gameStartResponse_.add(builderForValue.build());
+      public Builder addJoinerReadyResponse(
+          ServerClient.JoinerReadyResponse.Builder builderForValue) {
+        if (joinerReadyResponseBuilder_ == null) {
+          ensureJoinerReadyResponseIsMutable();
+          joinerReadyResponse_.add(builderForValue.build());
           onChanged();
         } else {
-          gameStartResponseBuilder_.addMessage(builderForValue.build());
+          joinerReadyResponseBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder addGameStartResponse(
-          int index, ServerClient.GameStartResponse.Builder builderForValue) {
-        if (gameStartResponseBuilder_ == null) {
-          ensureGameStartResponseIsMutable();
-          gameStartResponse_.add(index, builderForValue.build());
+      public Builder addJoinerReadyResponse(
+          int index, ServerClient.JoinerReadyResponse.Builder builderForValue) {
+        if (joinerReadyResponseBuilder_ == null) {
+          ensureJoinerReadyResponseIsMutable();
+          joinerReadyResponse_.add(index, builderForValue.build());
           onChanged();
         } else {
-          gameStartResponseBuilder_.addMessage(index, builderForValue.build());
+          joinerReadyResponseBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder addAllGameStartResponse(
-          java.lang.Iterable<? extends ServerClient.GameStartResponse> values) {
-        if (gameStartResponseBuilder_ == null) {
-          ensureGameStartResponseIsMutable();
+      public Builder addAllJoinerReadyResponse(
+          java.lang.Iterable<? extends ServerClient.JoinerReadyResponse> values) {
+        if (joinerReadyResponseBuilder_ == null) {
+          ensureJoinerReadyResponseIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, gameStartResponse_);
+              values, joinerReadyResponse_);
           onChanged();
         } else {
-          gameStartResponseBuilder_.addAllMessages(values);
+          joinerReadyResponseBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder clearGameStartResponse() {
-        if (gameStartResponseBuilder_ == null) {
-          gameStartResponse_ = java.util.Collections.emptyList();
+      public Builder clearJoinerReadyResponse() {
+        if (joinerReadyResponseBuilder_ == null) {
+          joinerReadyResponse_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
-          gameStartResponseBuilder_.clear();
+          joinerReadyResponseBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public Builder removeGameStartResponse(int index) {
-        if (gameStartResponseBuilder_ == null) {
-          ensureGameStartResponseIsMutable();
-          gameStartResponse_.remove(index);
+      public Builder removeJoinerReadyResponse(int index) {
+        if (joinerReadyResponseBuilder_ == null) {
+          ensureJoinerReadyResponseIsMutable();
+          joinerReadyResponse_.remove(index);
           onChanged();
         } else {
-          gameStartResponseBuilder_.remove(index);
+          joinerReadyResponseBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public ServerClient.GameStartResponse.Builder getGameStartResponseBuilder(
+      public ServerClient.JoinerReadyResponse.Builder getJoinerReadyResponseBuilder(
           int index) {
-        return getGameStartResponseFieldBuilder().getBuilder(index);
+        return getJoinerReadyResponseFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public ServerClient.GameStartResponseOrBuilder getGameStartResponseOrBuilder(
+      public ServerClient.JoinerReadyResponseOrBuilder getJoinerReadyResponseOrBuilder(
           int index) {
-        if (gameStartResponseBuilder_ == null) {
-          return gameStartResponse_.get(index);  } else {
-          return gameStartResponseBuilder_.getMessageOrBuilder(index);
+        if (joinerReadyResponseBuilder_ == null) {
+          return joinerReadyResponse_.get(index);  } else {
+          return joinerReadyResponseBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public java.util.List<? extends ServerClient.GameStartResponseOrBuilder> 
-           getGameStartResponseOrBuilderList() {
-        if (gameStartResponseBuilder_ != null) {
-          return gameStartResponseBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends ServerClient.JoinerReadyResponseOrBuilder> 
+           getJoinerReadyResponseOrBuilderList() {
+        if (joinerReadyResponseBuilder_ != null) {
+          return joinerReadyResponseBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(gameStartResponse_);
+          return java.util.Collections.unmodifiableList(joinerReadyResponse_);
         }
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public ServerClient.GameStartResponse.Builder addGameStartResponseBuilder() {
-        return getGameStartResponseFieldBuilder().addBuilder(
-            ServerClient.GameStartResponse.getDefaultInstance());
+      public ServerClient.JoinerReadyResponse.Builder addJoinerReadyResponseBuilder() {
+        return getJoinerReadyResponseFieldBuilder().addBuilder(
+            ServerClient.JoinerReadyResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public ServerClient.GameStartResponse.Builder addGameStartResponseBuilder(
+      public ServerClient.JoinerReadyResponse.Builder addJoinerReadyResponseBuilder(
           int index) {
-        return getGameStartResponseFieldBuilder().addBuilder(
-            index, ServerClient.GameStartResponse.getDefaultInstance());
+        return getJoinerReadyResponseFieldBuilder().addBuilder(
+            index, ServerClient.JoinerReadyResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .GameStartResponse gameStartResponse = 4;</code>
+       * <code>repeated .JoinerReadyResponse joinerReadyResponse = 4;</code>
        */
-      public java.util.List<ServerClient.GameStartResponse.Builder> 
-           getGameStartResponseBuilderList() {
-        return getGameStartResponseFieldBuilder().getBuilderList();
+      public java.util.List<ServerClient.JoinerReadyResponse.Builder> 
+           getJoinerReadyResponseBuilderList() {
+        return getJoinerReadyResponseFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ServerClient.GameStartResponse, ServerClient.GameStartResponse.Builder, ServerClient.GameStartResponseOrBuilder> 
-          getGameStartResponseFieldBuilder() {
-        if (gameStartResponseBuilder_ == null) {
-          gameStartResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              ServerClient.GameStartResponse, ServerClient.GameStartResponse.Builder, ServerClient.GameStartResponseOrBuilder>(
-                  gameStartResponse_,
+          ServerClient.JoinerReadyResponse, ServerClient.JoinerReadyResponse.Builder, ServerClient.JoinerReadyResponseOrBuilder> 
+          getJoinerReadyResponseFieldBuilder() {
+        if (joinerReadyResponseBuilder_ == null) {
+          joinerReadyResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ServerClient.JoinerReadyResponse, ServerClient.JoinerReadyResponse.Builder, ServerClient.JoinerReadyResponseOrBuilder>(
+                  joinerReadyResponse_,
                   ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
-          gameStartResponse_ = null;
+          joinerReadyResponse_ = null;
         }
-        return gameStartResponseBuilder_;
+        return joinerReadyResponseBuilder_;
       }
 
-      private java.util.List<ServerClient.RoomStatusInform> roomStatusInform_ =
+      private java.util.List<ServerClient.OwnerStartGameResponse> ownerStartGameResponse_ =
         java.util.Collections.emptyList();
-      private void ensureRoomStatusInformIsMutable() {
+      private void ensureOwnerStartGameResponseIsMutable() {
         if (!((bitField0_ & 0x00000010) != 0)) {
-          roomStatusInform_ = new java.util.ArrayList<ServerClient.RoomStatusInform>(roomStatusInform_);
+          ownerStartGameResponse_ = new java.util.ArrayList<ServerClient.OwnerStartGameResponse>(ownerStartGameResponse_);
           bitField0_ |= 0x00000010;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ServerClient.RoomStatusInform, ServerClient.RoomStatusInform.Builder, ServerClient.RoomStatusInformOrBuilder> roomStatusInformBuilder_;
+          ServerClient.OwnerStartGameResponse, ServerClient.OwnerStartGameResponse.Builder, ServerClient.OwnerStartGameResponseOrBuilder> ownerStartGameResponseBuilder_;
 
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public java.util.List<ServerClient.RoomStatusInform> getRoomStatusInformList() {
-        if (roomStatusInformBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(roomStatusInform_);
+      public java.util.List<ServerClient.OwnerStartGameResponse> getOwnerStartGameResponseList() {
+        if (ownerStartGameResponseBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ownerStartGameResponse_);
         } else {
-          return roomStatusInformBuilder_.getMessageList();
+          return ownerStartGameResponseBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public int getRoomStatusInformCount() {
-        if (roomStatusInformBuilder_ == null) {
-          return roomStatusInform_.size();
+      public int getOwnerStartGameResponseCount() {
+        if (ownerStartGameResponseBuilder_ == null) {
+          return ownerStartGameResponse_.size();
         } else {
-          return roomStatusInformBuilder_.getCount();
+          return ownerStartGameResponseBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public ServerClient.RoomStatusInform getRoomStatusInform(int index) {
-        if (roomStatusInformBuilder_ == null) {
-          return roomStatusInform_.get(index);
+      public ServerClient.OwnerStartGameResponse getOwnerStartGameResponse(int index) {
+        if (ownerStartGameResponseBuilder_ == null) {
+          return ownerStartGameResponse_.get(index);
         } else {
-          return roomStatusInformBuilder_.getMessage(index);
+          return ownerStartGameResponseBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder setRoomStatusInform(
-          int index, ServerClient.RoomStatusInform value) {
-        if (roomStatusInformBuilder_ == null) {
+      public Builder setOwnerStartGameResponse(
+          int index, ServerClient.OwnerStartGameResponse value) {
+        if (ownerStartGameResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureRoomStatusInformIsMutable();
-          roomStatusInform_.set(index, value);
+          ensureOwnerStartGameResponseIsMutable();
+          ownerStartGameResponse_.set(index, value);
           onChanged();
         } else {
-          roomStatusInformBuilder_.setMessage(index, value);
+          ownerStartGameResponseBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder setRoomStatusInform(
-          int index, ServerClient.RoomStatusInform.Builder builderForValue) {
-        if (roomStatusInformBuilder_ == null) {
-          ensureRoomStatusInformIsMutable();
-          roomStatusInform_.set(index, builderForValue.build());
+      public Builder setOwnerStartGameResponse(
+          int index, ServerClient.OwnerStartGameResponse.Builder builderForValue) {
+        if (ownerStartGameResponseBuilder_ == null) {
+          ensureOwnerStartGameResponseIsMutable();
+          ownerStartGameResponse_.set(index, builderForValue.build());
           onChanged();
         } else {
-          roomStatusInformBuilder_.setMessage(index, builderForValue.build());
+          ownerStartGameResponseBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder addRoomStatusInform(ServerClient.RoomStatusInform value) {
-        if (roomStatusInformBuilder_ == null) {
+      public Builder addOwnerStartGameResponse(ServerClient.OwnerStartGameResponse value) {
+        if (ownerStartGameResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureRoomStatusInformIsMutable();
-          roomStatusInform_.add(value);
+          ensureOwnerStartGameResponseIsMutable();
+          ownerStartGameResponse_.add(value);
           onChanged();
         } else {
-          roomStatusInformBuilder_.addMessage(value);
+          ownerStartGameResponseBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder addRoomStatusInform(
-          int index, ServerClient.RoomStatusInform value) {
-        if (roomStatusInformBuilder_ == null) {
+      public Builder addOwnerStartGameResponse(
+          int index, ServerClient.OwnerStartGameResponse value) {
+        if (ownerStartGameResponseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureRoomStatusInformIsMutable();
-          roomStatusInform_.add(index, value);
+          ensureOwnerStartGameResponseIsMutable();
+          ownerStartGameResponse_.add(index, value);
           onChanged();
         } else {
-          roomStatusInformBuilder_.addMessage(index, value);
+          ownerStartGameResponseBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder addRoomStatusInform(
-          ServerClient.RoomStatusInform.Builder builderForValue) {
-        if (roomStatusInformBuilder_ == null) {
-          ensureRoomStatusInformIsMutable();
-          roomStatusInform_.add(builderForValue.build());
+      public Builder addOwnerStartGameResponse(
+          ServerClient.OwnerStartGameResponse.Builder builderForValue) {
+        if (ownerStartGameResponseBuilder_ == null) {
+          ensureOwnerStartGameResponseIsMutable();
+          ownerStartGameResponse_.add(builderForValue.build());
           onChanged();
         } else {
-          roomStatusInformBuilder_.addMessage(builderForValue.build());
+          ownerStartGameResponseBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder addRoomStatusInform(
-          int index, ServerClient.RoomStatusInform.Builder builderForValue) {
-        if (roomStatusInformBuilder_ == null) {
-          ensureRoomStatusInformIsMutable();
-          roomStatusInform_.add(index, builderForValue.build());
+      public Builder addOwnerStartGameResponse(
+          int index, ServerClient.OwnerStartGameResponse.Builder builderForValue) {
+        if (ownerStartGameResponseBuilder_ == null) {
+          ensureOwnerStartGameResponseIsMutable();
+          ownerStartGameResponse_.add(index, builderForValue.build());
           onChanged();
         } else {
-          roomStatusInformBuilder_.addMessage(index, builderForValue.build());
+          ownerStartGameResponseBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder addAllRoomStatusInform(
-          java.lang.Iterable<? extends ServerClient.RoomStatusInform> values) {
-        if (roomStatusInformBuilder_ == null) {
-          ensureRoomStatusInformIsMutable();
+      public Builder addAllOwnerStartGameResponse(
+          java.lang.Iterable<? extends ServerClient.OwnerStartGameResponse> values) {
+        if (ownerStartGameResponseBuilder_ == null) {
+          ensureOwnerStartGameResponseIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, roomStatusInform_);
+              values, ownerStartGameResponse_);
           onChanged();
         } else {
-          roomStatusInformBuilder_.addAllMessages(values);
+          ownerStartGameResponseBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder clearRoomStatusInform() {
-        if (roomStatusInformBuilder_ == null) {
-          roomStatusInform_ = java.util.Collections.emptyList();
+      public Builder clearOwnerStartGameResponse() {
+        if (ownerStartGameResponseBuilder_ == null) {
+          ownerStartGameResponse_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
-          roomStatusInformBuilder_.clear();
+          ownerStartGameResponseBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public Builder removeRoomStatusInform(int index) {
-        if (roomStatusInformBuilder_ == null) {
-          ensureRoomStatusInformIsMutable();
-          roomStatusInform_.remove(index);
+      public Builder removeOwnerStartGameResponse(int index) {
+        if (ownerStartGameResponseBuilder_ == null) {
+          ensureOwnerStartGameResponseIsMutable();
+          ownerStartGameResponse_.remove(index);
           onChanged();
         } else {
-          roomStatusInformBuilder_.remove(index);
+          ownerStartGameResponseBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public ServerClient.RoomStatusInform.Builder getRoomStatusInformBuilder(
+      public ServerClient.OwnerStartGameResponse.Builder getOwnerStartGameResponseBuilder(
           int index) {
-        return getRoomStatusInformFieldBuilder().getBuilder(index);
+        return getOwnerStartGameResponseFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public ServerClient.RoomStatusInformOrBuilder getRoomStatusInformOrBuilder(
+      public ServerClient.OwnerStartGameResponseOrBuilder getOwnerStartGameResponseOrBuilder(
           int index) {
-        if (roomStatusInformBuilder_ == null) {
-          return roomStatusInform_.get(index);  } else {
-          return roomStatusInformBuilder_.getMessageOrBuilder(index);
+        if (ownerStartGameResponseBuilder_ == null) {
+          return ownerStartGameResponse_.get(index);  } else {
+          return ownerStartGameResponseBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public java.util.List<? extends ServerClient.RoomStatusInformOrBuilder> 
-           getRoomStatusInformOrBuilderList() {
-        if (roomStatusInformBuilder_ != null) {
-          return roomStatusInformBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends ServerClient.OwnerStartGameResponseOrBuilder> 
+           getOwnerStartGameResponseOrBuilderList() {
+        if (ownerStartGameResponseBuilder_ != null) {
+          return ownerStartGameResponseBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(roomStatusInform_);
+          return java.util.Collections.unmodifiableList(ownerStartGameResponse_);
         }
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public ServerClient.RoomStatusInform.Builder addRoomStatusInformBuilder() {
-        return getRoomStatusInformFieldBuilder().addBuilder(
-            ServerClient.RoomStatusInform.getDefaultInstance());
+      public ServerClient.OwnerStartGameResponse.Builder addOwnerStartGameResponseBuilder() {
+        return getOwnerStartGameResponseFieldBuilder().addBuilder(
+            ServerClient.OwnerStartGameResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public ServerClient.RoomStatusInform.Builder addRoomStatusInformBuilder(
+      public ServerClient.OwnerStartGameResponse.Builder addOwnerStartGameResponseBuilder(
           int index) {
-        return getRoomStatusInformFieldBuilder().addBuilder(
-            index, ServerClient.RoomStatusInform.getDefaultInstance());
+        return getOwnerStartGameResponseFieldBuilder().addBuilder(
+            index, ServerClient.OwnerStartGameResponse.getDefaultInstance());
       }
       /**
-       * <code>repeated .RoomStatusInform roomStatusInform = 5;</code>
+       * <code>repeated .OwnerStartGameResponse ownerStartGameResponse = 5;</code>
        */
-      public java.util.List<ServerClient.RoomStatusInform.Builder> 
-           getRoomStatusInformBuilderList() {
-        return getRoomStatusInformFieldBuilder().getBuilderList();
+      public java.util.List<ServerClient.OwnerStartGameResponse.Builder> 
+           getOwnerStartGameResponseBuilderList() {
+        return getOwnerStartGameResponseFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ServerClient.RoomStatusInform, ServerClient.RoomStatusInform.Builder, ServerClient.RoomStatusInformOrBuilder> 
-          getRoomStatusInformFieldBuilder() {
-        if (roomStatusInformBuilder_ == null) {
-          roomStatusInformBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              ServerClient.RoomStatusInform, ServerClient.RoomStatusInform.Builder, ServerClient.RoomStatusInformOrBuilder>(
-                  roomStatusInform_,
+          ServerClient.OwnerStartGameResponse, ServerClient.OwnerStartGameResponse.Builder, ServerClient.OwnerStartGameResponseOrBuilder> 
+          getOwnerStartGameResponseFieldBuilder() {
+        if (ownerStartGameResponseBuilder_ == null) {
+          ownerStartGameResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ServerClient.OwnerStartGameResponse, ServerClient.OwnerStartGameResponse.Builder, ServerClient.OwnerStartGameResponseOrBuilder>(
+                  ownerStartGameResponse_,
                   ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
-          roomStatusInform_ = null;
+          ownerStartGameResponse_ = null;
         }
-        return roomStatusInformBuilder_;
+        return ownerStartGameResponseBuilder_;
+      }
+
+      private java.util.List<ServerClient.RoomStatusResponse> roomStatusResponse_ =
+        java.util.Collections.emptyList();
+      private void ensureRoomStatusResponseIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          roomStatusResponse_ = new java.util.ArrayList<ServerClient.RoomStatusResponse>(roomStatusResponse_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ServerClient.RoomStatusResponse, ServerClient.RoomStatusResponse.Builder, ServerClient.RoomStatusResponseOrBuilder> roomStatusResponseBuilder_;
+
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public java.util.List<ServerClient.RoomStatusResponse> getRoomStatusResponseList() {
+        if (roomStatusResponseBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(roomStatusResponse_);
+        } else {
+          return roomStatusResponseBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public int getRoomStatusResponseCount() {
+        if (roomStatusResponseBuilder_ == null) {
+          return roomStatusResponse_.size();
+        } else {
+          return roomStatusResponseBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public ServerClient.RoomStatusResponse getRoomStatusResponse(int index) {
+        if (roomStatusResponseBuilder_ == null) {
+          return roomStatusResponse_.get(index);
+        } else {
+          return roomStatusResponseBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder setRoomStatusResponse(
+          int index, ServerClient.RoomStatusResponse value) {
+        if (roomStatusResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomStatusResponseIsMutable();
+          roomStatusResponse_.set(index, value);
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder setRoomStatusResponse(
+          int index, ServerClient.RoomStatusResponse.Builder builderForValue) {
+        if (roomStatusResponseBuilder_ == null) {
+          ensureRoomStatusResponseIsMutable();
+          roomStatusResponse_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder addRoomStatusResponse(ServerClient.RoomStatusResponse value) {
+        if (roomStatusResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomStatusResponseIsMutable();
+          roomStatusResponse_.add(value);
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder addRoomStatusResponse(
+          int index, ServerClient.RoomStatusResponse value) {
+        if (roomStatusResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomStatusResponseIsMutable();
+          roomStatusResponse_.add(index, value);
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder addRoomStatusResponse(
+          ServerClient.RoomStatusResponse.Builder builderForValue) {
+        if (roomStatusResponseBuilder_ == null) {
+          ensureRoomStatusResponseIsMutable();
+          roomStatusResponse_.add(builderForValue.build());
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder addRoomStatusResponse(
+          int index, ServerClient.RoomStatusResponse.Builder builderForValue) {
+        if (roomStatusResponseBuilder_ == null) {
+          ensureRoomStatusResponseIsMutable();
+          roomStatusResponse_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder addAllRoomStatusResponse(
+          java.lang.Iterable<? extends ServerClient.RoomStatusResponse> values) {
+        if (roomStatusResponseBuilder_ == null) {
+          ensureRoomStatusResponseIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, roomStatusResponse_);
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder clearRoomStatusResponse() {
+        if (roomStatusResponseBuilder_ == null) {
+          roomStatusResponse_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public Builder removeRoomStatusResponse(int index) {
+        if (roomStatusResponseBuilder_ == null) {
+          ensureRoomStatusResponseIsMutable();
+          roomStatusResponse_.remove(index);
+          onChanged();
+        } else {
+          roomStatusResponseBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public ServerClient.RoomStatusResponse.Builder getRoomStatusResponseBuilder(
+          int index) {
+        return getRoomStatusResponseFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public ServerClient.RoomStatusResponseOrBuilder getRoomStatusResponseOrBuilder(
+          int index) {
+        if (roomStatusResponseBuilder_ == null) {
+          return roomStatusResponse_.get(index);  } else {
+          return roomStatusResponseBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public java.util.List<? extends ServerClient.RoomStatusResponseOrBuilder> 
+           getRoomStatusResponseOrBuilderList() {
+        if (roomStatusResponseBuilder_ != null) {
+          return roomStatusResponseBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(roomStatusResponse_);
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public ServerClient.RoomStatusResponse.Builder addRoomStatusResponseBuilder() {
+        return getRoomStatusResponseFieldBuilder().addBuilder(
+            ServerClient.RoomStatusResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public ServerClient.RoomStatusResponse.Builder addRoomStatusResponseBuilder(
+          int index) {
+        return getRoomStatusResponseFieldBuilder().addBuilder(
+            index, ServerClient.RoomStatusResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .RoomStatusResponse roomStatusResponse = 6;</code>
+       */
+      public java.util.List<ServerClient.RoomStatusResponse.Builder> 
+           getRoomStatusResponseBuilderList() {
+        return getRoomStatusResponseFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ServerClient.RoomStatusResponse, ServerClient.RoomStatusResponse.Builder, ServerClient.RoomStatusResponseOrBuilder> 
+          getRoomStatusResponseFieldBuilder() {
+        if (roomStatusResponseBuilder_ == null) {
+          roomStatusResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ServerClient.RoomStatusResponse, ServerClient.RoomStatusResponse.Builder, ServerClient.RoomStatusResponseOrBuilder>(
+                  roomStatusResponse_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          roomStatusResponse_ = null;
+        }
+        return roomStatusResponseBuilder_;
       }
 
       private java.util.List<ServerClient.GameStartInform> gameStartInform_ =
         java.util.Collections.emptyList();
       private void ensureGameStartInformIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           gameStartInform_ = new java.util.ArrayList<ServerClient.GameStartInform>(gameStartInform_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -2499,7 +2873,7 @@ public final class ServerClient {
           ServerClient.GameStartInform, ServerClient.GameStartInform.Builder, ServerClient.GameStartInformOrBuilder> gameStartInformBuilder_;
 
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public java.util.List<ServerClient.GameStartInform> getGameStartInformList() {
         if (gameStartInformBuilder_ == null) {
@@ -2509,7 +2883,7 @@ public final class ServerClient {
         }
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public int getGameStartInformCount() {
         if (gameStartInformBuilder_ == null) {
@@ -2519,7 +2893,7 @@ public final class ServerClient {
         }
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public ServerClient.GameStartInform getGameStartInform(int index) {
         if (gameStartInformBuilder_ == null) {
@@ -2529,7 +2903,7 @@ public final class ServerClient {
         }
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder setGameStartInform(
           int index, ServerClient.GameStartInform value) {
@@ -2546,7 +2920,7 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder setGameStartInform(
           int index, ServerClient.GameStartInform.Builder builderForValue) {
@@ -2560,7 +2934,7 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder addGameStartInform(ServerClient.GameStartInform value) {
         if (gameStartInformBuilder_ == null) {
@@ -2576,7 +2950,7 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder addGameStartInform(
           int index, ServerClient.GameStartInform value) {
@@ -2593,7 +2967,7 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder addGameStartInform(
           ServerClient.GameStartInform.Builder builderForValue) {
@@ -2607,7 +2981,7 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder addGameStartInform(
           int index, ServerClient.GameStartInform.Builder builderForValue) {
@@ -2621,7 +2995,7 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder addAllGameStartInform(
           java.lang.Iterable<? extends ServerClient.GameStartInform> values) {
@@ -2636,12 +3010,12 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder clearGameStartInform() {
         if (gameStartInformBuilder_ == null) {
           gameStartInform_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           gameStartInformBuilder_.clear();
@@ -2649,7 +3023,7 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public Builder removeGameStartInform(int index) {
         if (gameStartInformBuilder_ == null) {
@@ -2662,14 +3036,14 @@ public final class ServerClient {
         return this;
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public ServerClient.GameStartInform.Builder getGameStartInformBuilder(
           int index) {
         return getGameStartInformFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public ServerClient.GameStartInformOrBuilder getGameStartInformOrBuilder(
           int index) {
@@ -2679,7 +3053,7 @@ public final class ServerClient {
         }
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public java.util.List<? extends ServerClient.GameStartInformOrBuilder> 
            getGameStartInformOrBuilderList() {
@@ -2690,14 +3064,14 @@ public final class ServerClient {
         }
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public ServerClient.GameStartInform.Builder addGameStartInformBuilder() {
         return getGameStartInformFieldBuilder().addBuilder(
             ServerClient.GameStartInform.getDefaultInstance());
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public ServerClient.GameStartInform.Builder addGameStartInformBuilder(
           int index) {
@@ -2705,7 +3079,7 @@ public final class ServerClient {
             index, ServerClient.GameStartInform.getDefaultInstance());
       }
       /**
-       * <code>repeated .GameStartInform gameStartInform = 6;</code>
+       * <code>repeated .GameStartInform gameStartInform = 7;</code>
        */
       public java.util.List<ServerClient.GameStartInform.Builder> 
            getGameStartInformBuilderList() {
@@ -2718,7 +3092,7 @@ public final class ServerClient {
           gameStartInformBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ServerClient.GameStartInform, ServerClient.GameStartInform.Builder, ServerClient.GameStartInformOrBuilder>(
                   gameStartInform_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           gameStartInform_ = null;
@@ -3560,7 +3934,7 @@ public final class ServerClient {
      * empty str for failure
      * </pre>
      *
-     * <code>string room_code = 4;</code>
+     * <code>string room_code = 2;</code>
      * @return The roomCode.
      */
     java.lang.String getRoomCode();
@@ -3570,18 +3944,30 @@ public final class ServerClient {
      * empty str for failure
      * </pre>
      *
-     * <code>string room_code = 4;</code>
+     * <code>string room_code = 2;</code>
      * @return The bytes for roomCode.
      */
     com.google.protobuf.ByteString
         getRoomCodeBytes();
 
     /**
+     * <code>string room_owner_name = 3;</code>
+     * @return The roomOwnerName.
+     */
+    java.lang.String getRoomOwnerName();
+    /**
+     * <code>string room_owner_name = 3;</code>
+     * @return The bytes for roomOwnerName.
+     */
+    com.google.protobuf.ByteString
+        getRoomOwnerNameBytes();
+
+    /**
      * <pre>
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 5;</code>
+     * <code>string fail_reason = 4;</code>
      * @return The failReason.
      */
     java.lang.String getFailReason();
@@ -3590,7 +3976,7 @@ public final class ServerClient {
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 5;</code>
+     * <code>string fail_reason = 4;</code>
      * @return The bytes for failReason.
      */
     com.google.protobuf.ByteString
@@ -3615,6 +4001,7 @@ public final class ServerClient {
     private RoomCreateResponse() {
       status_ = 0;
       roomCode_ = "";
+      roomOwnerName_ = "";
       failReason_ = "";
     }
 
@@ -3669,7 +4056,7 @@ public final class ServerClient {
       return result == null ? ServerClient.Status.UNRECOGNIZED : result;
     }
 
-    public static final int ROOM_CODE_FIELD_NUMBER = 4;
+    public static final int ROOM_CODE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object roomCode_ = "";
     /**
@@ -3678,7 +4065,7 @@ public final class ServerClient {
      * empty str for failure
      * </pre>
      *
-     * <code>string room_code = 4;</code>
+     * <code>string room_code = 2;</code>
      * @return The roomCode.
      */
     @java.lang.Override
@@ -3700,7 +4087,7 @@ public final class ServerClient {
      * empty str for failure
      * </pre>
      *
-     * <code>string room_code = 4;</code>
+     * <code>string room_code = 2;</code>
      * @return The bytes for roomCode.
      */
     @java.lang.Override
@@ -3718,7 +4105,46 @@ public final class ServerClient {
       }
     }
 
-    public static final int FAIL_REASON_FIELD_NUMBER = 5;
+    public static final int ROOM_OWNER_NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object roomOwnerName_ = "";
+    /**
+     * <code>string room_owner_name = 3;</code>
+     * @return The roomOwnerName.
+     */
+    @java.lang.Override
+    public java.lang.String getRoomOwnerName() {
+      java.lang.Object ref = roomOwnerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roomOwnerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string room_owner_name = 3;</code>
+     * @return The bytes for roomOwnerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoomOwnerNameBytes() {
+      java.lang.Object ref = roomOwnerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roomOwnerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FAIL_REASON_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object failReason_ = "";
     /**
@@ -3726,7 +4152,7 @@ public final class ServerClient {
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 5;</code>
+     * <code>string fail_reason = 4;</code>
      * @return The failReason.
      */
     @java.lang.Override
@@ -3747,7 +4173,7 @@ public final class ServerClient {
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 5;</code>
+     * <code>string fail_reason = 4;</code>
      * @return The bytes for failReason.
      */
     @java.lang.Override
@@ -3783,10 +4209,13 @@ public final class ServerClient {
         output.writeEnum(1, status_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, roomCode_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roomCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomOwnerName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, roomOwnerName_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failReason_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, failReason_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, failReason_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3802,10 +4231,13 @@ public final class ServerClient {
           .computeEnumSize(1, status_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, roomCode_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roomCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomOwnerName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, roomOwnerName_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failReason_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, failReason_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, failReason_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3825,6 +4257,8 @@ public final class ServerClient {
       if (status_ != other.status_) return false;
       if (!getRoomCode()
           .equals(other.getRoomCode())) return false;
+      if (!getRoomOwnerName()
+          .equals(other.getRoomOwnerName())) return false;
       if (!getFailReason()
           .equals(other.getFailReason())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -3842,6 +4276,8 @@ public final class ServerClient {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + ROOM_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getRoomCode().hashCode();
+      hash = (37 * hash) + ROOM_OWNER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRoomOwnerName().hashCode();
       hash = (37 * hash) + FAIL_REASON_FIELD_NUMBER;
       hash = (53 * hash) + getFailReason().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -3979,6 +4415,7 @@ public final class ServerClient {
         bitField0_ = 0;
         status_ = 0;
         roomCode_ = "";
+        roomOwnerName_ = "";
         failReason_ = "";
         return this;
       }
@@ -4020,6 +4457,9 @@ public final class ServerClient {
           result.roomCode_ = roomCode_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.roomOwnerName_ = roomOwnerName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.failReason_ = failReason_;
         }
       }
@@ -4076,9 +4516,14 @@ public final class ServerClient {
           bitField0_ |= 0x00000002;
           onChanged();
         }
+        if (!other.getRoomOwnerName().isEmpty()) {
+          roomOwnerName_ = other.roomOwnerName_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         if (!other.getFailReason().isEmpty()) {
           failReason_ = other.failReason_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4112,16 +4557,21 @@ public final class ServerClient {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
-              case 34: {
+              case 18: {
                 roomCode_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 34
-              case 42: {
-                failReason_ = input.readStringRequireUtf8();
+              } // case 18
+              case 26: {
+                roomOwnerName_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 42
+              } // case 26
+              case 34: {
+                failReason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4219,7 +4669,7 @@ public final class ServerClient {
        * empty str for failure
        * </pre>
        *
-       * <code>string room_code = 4;</code>
+       * <code>string room_code = 2;</code>
        * @return The roomCode.
        */
       public java.lang.String getRoomCode() {
@@ -4240,7 +4690,7 @@ public final class ServerClient {
        * empty str for failure
        * </pre>
        *
-       * <code>string room_code = 4;</code>
+       * <code>string room_code = 2;</code>
        * @return The bytes for roomCode.
        */
       public com.google.protobuf.ByteString
@@ -4262,7 +4712,7 @@ public final class ServerClient {
        * empty str for failure
        * </pre>
        *
-       * <code>string room_code = 4;</code>
+       * <code>string room_code = 2;</code>
        * @param value The roomCode to set.
        * @return This builder for chaining.
        */
@@ -4280,7 +4730,7 @@ public final class ServerClient {
        * empty str for failure
        * </pre>
        *
-       * <code>string room_code = 4;</code>
+       * <code>string room_code = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRoomCode() {
@@ -4295,7 +4745,7 @@ public final class ServerClient {
        * empty str for failure
        * </pre>
        *
-       * <code>string room_code = 4;</code>
+       * <code>string room_code = 2;</code>
        * @param value The bytes for roomCode to set.
        * @return This builder for chaining.
        */
@@ -4309,13 +4759,85 @@ public final class ServerClient {
         return this;
       }
 
+      private java.lang.Object roomOwnerName_ = "";
+      /**
+       * <code>string room_owner_name = 3;</code>
+       * @return The roomOwnerName.
+       */
+      public java.lang.String getRoomOwnerName() {
+        java.lang.Object ref = roomOwnerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roomOwnerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string room_owner_name = 3;</code>
+       * @return The bytes for roomOwnerName.
+       */
+      public com.google.protobuf.ByteString
+          getRoomOwnerNameBytes() {
+        java.lang.Object ref = roomOwnerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roomOwnerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string room_owner_name = 3;</code>
+       * @param value The roomOwnerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomOwnerName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        roomOwnerName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_owner_name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoomOwnerName() {
+        roomOwnerName_ = getDefaultInstance().getRoomOwnerName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_owner_name = 3;</code>
+       * @param value The bytes for roomOwnerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomOwnerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        roomOwnerName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object failReason_ = "";
       /**
        * <pre>
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 5;</code>
+       * <code>string fail_reason = 4;</code>
        * @return The failReason.
        */
       public java.lang.String getFailReason() {
@@ -4335,7 +4857,7 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 5;</code>
+       * <code>string fail_reason = 4;</code>
        * @return The bytes for failReason.
        */
       public com.google.protobuf.ByteString
@@ -4356,7 +4878,7 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 5;</code>
+       * <code>string fail_reason = 4;</code>
        * @param value The failReason to set.
        * @return This builder for chaining.
        */
@@ -4364,7 +4886,7 @@ public final class ServerClient {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         failReason_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4373,12 +4895,12 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 5;</code>
+       * <code>string fail_reason = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailReason() {
         failReason_ = getDefaultInstance().getFailReason();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4387,7 +4909,7 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 5;</code>
+       * <code>string fail_reason = 4;</code>
        * @param value The bytes for failReason to set.
        * @return This builder for chaining.
        */
@@ -4396,7 +4918,7 @@ public final class ServerClient {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         failReason_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4488,11 +5010,23 @@ public final class ServerClient {
     ServerClient.Status getStatus();
 
     /**
+     * <code>string room_owner_name = 2;</code>
+     * @return The roomOwnerName.
+     */
+    java.lang.String getRoomOwnerName();
+    /**
+     * <code>string room_owner_name = 2;</code>
+     * @return The bytes for roomOwnerName.
+     */
+    com.google.protobuf.ByteString
+        getRoomOwnerNameBytes();
+
+    /**
      * <pre>
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 4;</code>
+     * <code>string fail_reason = 3;</code>
      * @return The failReason.
      */
     java.lang.String getFailReason();
@@ -4501,7 +5035,7 @@ public final class ServerClient {
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 4;</code>
+     * <code>string fail_reason = 3;</code>
      * @return The bytes for failReason.
      */
     com.google.protobuf.ByteString
@@ -4525,6 +5059,7 @@ public final class ServerClient {
     }
     private RoomJoinResponse() {
       status_ = 0;
+      roomOwnerName_ = "";
       failReason_ = "";
     }
 
@@ -4579,7 +5114,46 @@ public final class ServerClient {
       return result == null ? ServerClient.Status.UNRECOGNIZED : result;
     }
 
-    public static final int FAIL_REASON_FIELD_NUMBER = 4;
+    public static final int ROOM_OWNER_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object roomOwnerName_ = "";
+    /**
+     * <code>string room_owner_name = 2;</code>
+     * @return The roomOwnerName.
+     */
+    @java.lang.Override
+    public java.lang.String getRoomOwnerName() {
+      java.lang.Object ref = roomOwnerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roomOwnerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string room_owner_name = 2;</code>
+     * @return The bytes for roomOwnerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoomOwnerNameBytes() {
+      java.lang.Object ref = roomOwnerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roomOwnerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FAIL_REASON_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object failReason_ = "";
     /**
@@ -4587,7 +5161,7 @@ public final class ServerClient {
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 4;</code>
+     * <code>string fail_reason = 3;</code>
      * @return The failReason.
      */
     @java.lang.Override
@@ -4608,7 +5182,7 @@ public final class ServerClient {
      * empty str for success
      * </pre>
      *
-     * <code>string fail_reason = 4;</code>
+     * <code>string fail_reason = 3;</code>
      * @return The bytes for failReason.
      */
     @java.lang.Override
@@ -4643,8 +5217,11 @@ public final class ServerClient {
       if (status_ != ServerClient.Status.SUCCESS.getNumber()) {
         output.writeEnum(1, status_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomOwnerName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roomOwnerName_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failReason_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, failReason_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, failReason_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4659,8 +5236,11 @@ public final class ServerClient {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, status_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomOwnerName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roomOwnerName_);
+      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failReason_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, failReason_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, failReason_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4678,6 +5258,8 @@ public final class ServerClient {
       ServerClient.RoomJoinResponse other = (ServerClient.RoomJoinResponse) obj;
 
       if (status_ != other.status_) return false;
+      if (!getRoomOwnerName()
+          .equals(other.getRoomOwnerName())) return false;
       if (!getFailReason()
           .equals(other.getFailReason())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -4693,6 +5275,8 @@ public final class ServerClient {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + ROOM_OWNER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRoomOwnerName().hashCode();
       hash = (37 * hash) + FAIL_REASON_FIELD_NUMBER;
       hash = (53 * hash) + getFailReason().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -4829,6 +5413,7 @@ public final class ServerClient {
         super.clear();
         bitField0_ = 0;
         status_ = 0;
+        roomOwnerName_ = "";
         failReason_ = "";
         return this;
       }
@@ -4867,6 +5452,9 @@ public final class ServerClient {
           result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.roomOwnerName_ = roomOwnerName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.failReason_ = failReason_;
         }
       }
@@ -4918,9 +5506,14 @@ public final class ServerClient {
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
         }
+        if (!other.getRoomOwnerName().isEmpty()) {
+          roomOwnerName_ = other.roomOwnerName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         if (!other.getFailReason().isEmpty()) {
           failReason_ = other.failReason_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4954,11 +5547,16 @@ public final class ServerClient {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
-              case 34: {
-                failReason_ = input.readStringRequireUtf8();
+              case 18: {
+                roomOwnerName_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 34
+              } // case 18
+              case 26: {
+                failReason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5049,13 +5647,85 @@ public final class ServerClient {
         return this;
       }
 
+      private java.lang.Object roomOwnerName_ = "";
+      /**
+       * <code>string room_owner_name = 2;</code>
+       * @return The roomOwnerName.
+       */
+      public java.lang.String getRoomOwnerName() {
+        java.lang.Object ref = roomOwnerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roomOwnerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string room_owner_name = 2;</code>
+       * @return The bytes for roomOwnerName.
+       */
+      public com.google.protobuf.ByteString
+          getRoomOwnerNameBytes() {
+        java.lang.Object ref = roomOwnerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roomOwnerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string room_owner_name = 2;</code>
+       * @param value The roomOwnerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomOwnerName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        roomOwnerName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_owner_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoomOwnerName() {
+        roomOwnerName_ = getDefaultInstance().getRoomOwnerName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_owner_name = 2;</code>
+       * @param value The bytes for roomOwnerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomOwnerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        roomOwnerName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object failReason_ = "";
       /**
        * <pre>
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 4;</code>
+       * <code>string fail_reason = 3;</code>
        * @return The failReason.
        */
       public java.lang.String getFailReason() {
@@ -5075,7 +5745,7 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 4;</code>
+       * <code>string fail_reason = 3;</code>
        * @return The bytes for failReason.
        */
       public com.google.protobuf.ByteString
@@ -5096,7 +5766,7 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 4;</code>
+       * <code>string fail_reason = 3;</code>
        * @param value The failReason to set.
        * @return This builder for chaining.
        */
@@ -5104,7 +5774,7 @@ public final class ServerClient {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         failReason_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5113,12 +5783,12 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 4;</code>
+       * <code>string fail_reason = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailReason() {
         failReason_ = getDefaultInstance().getFailReason();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -5127,7 +5797,7 @@ public final class ServerClient {
        * empty str for success
        * </pre>
        *
-       * <code>string fail_reason = 4;</code>
+       * <code>string fail_reason = 3;</code>
        * @param value The bytes for failReason to set.
        * @return This builder for chaining.
        */
@@ -5136,7 +5806,7 @@ public final class ServerClient {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         failReason_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5204,8 +5874,8 @@ public final class ServerClient {
 
   }
 
-  public interface GameStartResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:GameStartResponse)
+  public interface JoinerReadyResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JoinerReadyResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5252,18 +5922,18 @@ public final class ServerClient {
    * response for GameStartRequest
    * </pre>
    *
-   * Protobuf type {@code GameStartResponse}
+   * Protobuf type {@code JoinerReadyResponse}
    */
-  public static final class GameStartResponse extends
+  public static final class JoinerReadyResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:GameStartResponse)
-      GameStartResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:JoinerReadyResponse)
+      JoinerReadyResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GameStartResponse.newBuilder() to construct.
-    private GameStartResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use JoinerReadyResponse.newBuilder() to construct.
+    private JoinerReadyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GameStartResponse() {
+    private JoinerReadyResponse() {
       status_ = 0;
       failReason_ = "";
     }
@@ -5272,7 +5942,7 @@ public final class ServerClient {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GameStartResponse();
+      return new JoinerReadyResponse();
     }
 
     @java.lang.Override
@@ -5282,15 +5952,15 @@ public final class ServerClient {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerClient.internal_static_GameStartResponse_descriptor;
+      return ServerClient.internal_static_JoinerReadyResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerClient.internal_static_GameStartResponse_fieldAccessorTable
+      return ServerClient.internal_static_JoinerReadyResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ServerClient.GameStartResponse.class, ServerClient.GameStartResponse.Builder.class);
+              ServerClient.JoinerReadyResponse.class, ServerClient.JoinerReadyResponse.Builder.class);
     }
 
     public static final int STATUS_FIELD_NUMBER = 1;
@@ -5412,10 +6082,10 @@ public final class ServerClient {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ServerClient.GameStartResponse)) {
+      if (!(obj instanceof ServerClient.JoinerReadyResponse)) {
         return super.equals(obj);
       }
-      ServerClient.GameStartResponse other = (ServerClient.GameStartResponse) obj;
+      ServerClient.JoinerReadyResponse other = (ServerClient.JoinerReadyResponse) obj;
 
       if (status_ != other.status_) return false;
       if (!getFailReason()
@@ -5440,69 +6110,69 @@ public final class ServerClient {
       return hash;
     }
 
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ServerClient.GameStartResponse parseFrom(byte[] data)
+    public static ServerClient.JoinerReadyResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ServerClient.GameStartResponse parseFrom(java.io.InputStream input)
+    public static ServerClient.JoinerReadyResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ServerClient.GameStartResponse parseDelimitedFrom(java.io.InputStream input)
+    public static ServerClient.JoinerReadyResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ServerClient.GameStartResponse parseDelimitedFrom(
+    public static ServerClient.JoinerReadyResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ServerClient.GameStartResponse parseFrom(
+    public static ServerClient.JoinerReadyResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5515,7 +6185,7 @@ public final class ServerClient {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ServerClient.GameStartResponse prototype) {
+    public static Builder newBuilder(ServerClient.JoinerReadyResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5535,26 +6205,26 @@ public final class ServerClient {
      * response for GameStartRequest
      * </pre>
      *
-     * Protobuf type {@code GameStartResponse}
+     * Protobuf type {@code JoinerReadyResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:GameStartResponse)
-        ServerClient.GameStartResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:JoinerReadyResponse)
+        ServerClient.JoinerReadyResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerClient.internal_static_GameStartResponse_descriptor;
+        return ServerClient.internal_static_JoinerReadyResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerClient.internal_static_GameStartResponse_fieldAccessorTable
+        return ServerClient.internal_static_JoinerReadyResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ServerClient.GameStartResponse.class, ServerClient.GameStartResponse.Builder.class);
+                ServerClient.JoinerReadyResponse.class, ServerClient.JoinerReadyResponse.Builder.class);
       }
 
-      // Construct using ServerClient.GameStartResponse.newBuilder()
+      // Construct using ServerClient.JoinerReadyResponse.newBuilder()
       private Builder() {
 
       }
@@ -5576,17 +6246,17 @@ public final class ServerClient {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerClient.internal_static_GameStartResponse_descriptor;
+        return ServerClient.internal_static_JoinerReadyResponse_descriptor;
       }
 
       @java.lang.Override
-      public ServerClient.GameStartResponse getDefaultInstanceForType() {
-        return ServerClient.GameStartResponse.getDefaultInstance();
+      public ServerClient.JoinerReadyResponse getDefaultInstanceForType() {
+        return ServerClient.JoinerReadyResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ServerClient.GameStartResponse build() {
-        ServerClient.GameStartResponse result = buildPartial();
+      public ServerClient.JoinerReadyResponse build() {
+        ServerClient.JoinerReadyResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5594,14 +6264,14 @@ public final class ServerClient {
       }
 
       @java.lang.Override
-      public ServerClient.GameStartResponse buildPartial() {
-        ServerClient.GameStartResponse result = new ServerClient.GameStartResponse(this);
+      public ServerClient.JoinerReadyResponse buildPartial() {
+        ServerClient.JoinerReadyResponse result = new ServerClient.JoinerReadyResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(ServerClient.GameStartResponse result) {
+      private void buildPartial0(ServerClient.JoinerReadyResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.status_ = status_;
@@ -5645,16 +6315,16 @@ public final class ServerClient {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ServerClient.GameStartResponse) {
-          return mergeFrom((ServerClient.GameStartResponse)other);
+        if (other instanceof ServerClient.JoinerReadyResponse) {
+          return mergeFrom((ServerClient.JoinerReadyResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ServerClient.GameStartResponse other) {
-        if (other == ServerClient.GameStartResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(ServerClient.JoinerReadyResponse other) {
+        if (other == ServerClient.JoinerReadyResponse.getDefaultInstance()) return this;
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
         }
@@ -5893,23 +6563,23 @@ public final class ServerClient {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:GameStartResponse)
+      // @@protoc_insertion_point(builder_scope:JoinerReadyResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:GameStartResponse)
-    private static final ServerClient.GameStartResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:JoinerReadyResponse)
+    private static final ServerClient.JoinerReadyResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ServerClient.GameStartResponse();
+      DEFAULT_INSTANCE = new ServerClient.JoinerReadyResponse();
     }
 
-    public static ServerClient.GameStartResponse getDefaultInstance() {
+    public static ServerClient.JoinerReadyResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GameStartResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GameStartResponse>() {
+    private static final com.google.protobuf.Parser<JoinerReadyResponse>
+        PARSER = new com.google.protobuf.AbstractParser<JoinerReadyResponse>() {
       @java.lang.Override
-      public GameStartResponse parsePartialFrom(
+      public JoinerReadyResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5928,39 +6598,765 @@ public final class ServerClient {
       }
     };
 
-    public static com.google.protobuf.Parser<GameStartResponse> parser() {
+    public static com.google.protobuf.Parser<JoinerReadyResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GameStartResponse> getParserForType() {
+    public com.google.protobuf.Parser<JoinerReadyResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ServerClient.GameStartResponse getDefaultInstanceForType() {
+    public ServerClient.JoinerReadyResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface RoomStatusInformOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:RoomStatusInform)
+  public interface OwnerStartGameResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:OwnerStartGameResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 player_num = 1;</code>
-     * @return The playerNum.
+     * <pre>
+     * 0 for success, 1 for failure
+     * </pre>
+     *
+     * <code>.Status status = 1;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    int getPlayerNum();
+    int getStatusValue();
+    /**
+     * <pre>
+     * 0 for success, 1 for failure
+     * </pre>
+     *
+     * <code>.Status status = 1;</code>
+     * @return The status.
+     */
+    ServerClient.Status getStatus();
 
     /**
-     * <code>string room_status = 3;</code>
+     * <pre>
+     * empty str for success
+     * </pre>
+     *
+     * <code>string fail_reason = 2;</code>
+     * @return The failReason.
+     */
+    java.lang.String getFailReason();
+    /**
+     * <pre>
+     * empty str for success
+     * </pre>
+     *
+     * <code>string fail_reason = 2;</code>
+     * @return The bytes for failReason.
+     */
+    com.google.protobuf.ByteString
+        getFailReasonBytes();
+  }
+  /**
+   * Protobuf type {@code OwnerStartGameResponse}
+   */
+  public static final class OwnerStartGameResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:OwnerStartGameResponse)
+      OwnerStartGameResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OwnerStartGameResponse.newBuilder() to construct.
+    private OwnerStartGameResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OwnerStartGameResponse() {
+      status_ = 0;
+      failReason_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OwnerStartGameResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ServerClient.internal_static_OwnerStartGameResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ServerClient.internal_static_OwnerStartGameResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ServerClient.OwnerStartGameResponse.class, ServerClient.OwnerStartGameResponse.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private int status_ = 0;
+    /**
+     * <pre>
+     * 0 for success, 1 for failure
+     * </pre>
+     *
+     * <code>.Status status = 1;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * 0 for success, 1 for failure
+     * </pre>
+     *
+     * <code>.Status status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override public ServerClient.Status getStatus() {
+      ServerClient.Status result = ServerClient.Status.forNumber(status_);
+      return result == null ? ServerClient.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int FAIL_REASON_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object failReason_ = "";
+    /**
+     * <pre>
+     * empty str for success
+     * </pre>
+     *
+     * <code>string fail_reason = 2;</code>
+     * @return The failReason.
+     */
+    @java.lang.Override
+    public java.lang.String getFailReason() {
+      java.lang.Object ref = failReason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        failReason_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * empty str for success
+     * </pre>
+     *
+     * <code>string fail_reason = 2;</code>
+     * @return The bytes for failReason.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFailReasonBytes() {
+      java.lang.Object ref = failReason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        failReason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != ServerClient.Status.SUCCESS.getNumber()) {
+        output.writeEnum(1, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failReason_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, failReason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != ServerClient.Status.SUCCESS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(failReason_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, failReason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ServerClient.OwnerStartGameResponse)) {
+        return super.equals(obj);
+      }
+      ServerClient.OwnerStartGameResponse other = (ServerClient.OwnerStartGameResponse) obj;
+
+      if (status_ != other.status_) return false;
+      if (!getFailReason()
+          .equals(other.getFailReason())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + FAIL_REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getFailReason().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ServerClient.OwnerStartGameResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ServerClient.OwnerStartGameResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ServerClient.OwnerStartGameResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ServerClient.OwnerStartGameResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code OwnerStartGameResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:OwnerStartGameResponse)
+        ServerClient.OwnerStartGameResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ServerClient.internal_static_OwnerStartGameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ServerClient.internal_static_OwnerStartGameResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ServerClient.OwnerStartGameResponse.class, ServerClient.OwnerStartGameResponse.Builder.class);
+      }
+
+      // Construct using ServerClient.OwnerStartGameResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        status_ = 0;
+        failReason_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ServerClient.internal_static_OwnerStartGameResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public ServerClient.OwnerStartGameResponse getDefaultInstanceForType() {
+        return ServerClient.OwnerStartGameResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ServerClient.OwnerStartGameResponse build() {
+        ServerClient.OwnerStartGameResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ServerClient.OwnerStartGameResponse buildPartial() {
+        ServerClient.OwnerStartGameResponse result = new ServerClient.OwnerStartGameResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ServerClient.OwnerStartGameResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.failReason_ = failReason_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ServerClient.OwnerStartGameResponse) {
+          return mergeFrom((ServerClient.OwnerStartGameResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ServerClient.OwnerStartGameResponse other) {
+        if (other == ServerClient.OwnerStartGameResponse.getDefaultInstance()) return this;
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.getFailReason().isEmpty()) {
+          failReason_ = other.failReason_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                failReason_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * 0 for success, 1 for failure
+       * </pre>
+       *
+       * <code>.Status status = 1;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * 0 for success, 1 for failure
+       * </pre>
+       *
+       * <code>.Status status = 1;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        status_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 0 for success, 1 for failure
+       * </pre>
+       *
+       * <code>.Status status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public ServerClient.Status getStatus() {
+        ServerClient.Status result = ServerClient.Status.forNumber(status_);
+        return result == null ? ServerClient.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * 0 for success, 1 for failure
+       * </pre>
+       *
+       * <code>.Status status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(ServerClient.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 0 for success, 1 for failure
+       * </pre>
+       *
+       * <code>.Status status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object failReason_ = "";
+      /**
+       * <pre>
+       * empty str for success
+       * </pre>
+       *
+       * <code>string fail_reason = 2;</code>
+       * @return The failReason.
+       */
+      public java.lang.String getFailReason() {
+        java.lang.Object ref = failReason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          failReason_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * empty str for success
+       * </pre>
+       *
+       * <code>string fail_reason = 2;</code>
+       * @return The bytes for failReason.
+       */
+      public com.google.protobuf.ByteString
+          getFailReasonBytes() {
+        java.lang.Object ref = failReason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          failReason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * empty str for success
+       * </pre>
+       *
+       * <code>string fail_reason = 2;</code>
+       * @param value The failReason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailReason(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        failReason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * empty str for success
+       * </pre>
+       *
+       * <code>string fail_reason = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailReason() {
+        failReason_ = getDefaultInstance().getFailReason();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * empty str for success
+       * </pre>
+       *
+       * <code>string fail_reason = 2;</code>
+       * @param value The bytes for failReason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        failReason_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:OwnerStartGameResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:OwnerStartGameResponse)
+    private static final ServerClient.OwnerStartGameResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ServerClient.OwnerStartGameResponse();
+    }
+
+    public static ServerClient.OwnerStartGameResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OwnerStartGameResponse>
+        PARSER = new com.google.protobuf.AbstractParser<OwnerStartGameResponse>() {
+      @java.lang.Override
+      public OwnerStartGameResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OwnerStartGameResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OwnerStartGameResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ServerClient.OwnerStartGameResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoomStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:RoomStatusResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string room_status = 1;</code>
      * @return The roomStatus.
      */
     java.lang.String getRoomStatus();
     /**
-     * <code>string room_status = 3;</code>
+     * <code>string room_status = 1;</code>
      * @return The bytes for roomStatus.
      */
     com.google.protobuf.ByteString
@@ -5972,18 +7368,18 @@ public final class ServerClient {
    * both after people join and people ready to start
    * </pre>
    *
-   * Protobuf type {@code RoomStatusInform}
+   * Protobuf type {@code RoomStatusResponse}
    */
-  public static final class RoomStatusInform extends
+  public static final class RoomStatusResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:RoomStatusInform)
-      RoomStatusInformOrBuilder {
+      // @@protoc_insertion_point(message_implements:RoomStatusResponse)
+      RoomStatusResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use RoomStatusInform.newBuilder() to construct.
-    private RoomStatusInform(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use RoomStatusResponse.newBuilder() to construct.
+    private RoomStatusResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RoomStatusInform() {
+    private RoomStatusResponse() {
       roomStatus_ = "";
     }
 
@@ -5991,7 +7387,7 @@ public final class ServerClient {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new RoomStatusInform();
+      return new RoomStatusResponse();
     }
 
     @java.lang.Override
@@ -6001,33 +7397,22 @@ public final class ServerClient {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ServerClient.internal_static_RoomStatusInform_descriptor;
+      return ServerClient.internal_static_RoomStatusResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ServerClient.internal_static_RoomStatusInform_fieldAccessorTable
+      return ServerClient.internal_static_RoomStatusResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ServerClient.RoomStatusInform.class, ServerClient.RoomStatusInform.Builder.class);
+              ServerClient.RoomStatusResponse.class, ServerClient.RoomStatusResponse.Builder.class);
     }
 
-    public static final int PLAYER_NUM_FIELD_NUMBER = 1;
-    private int playerNum_ = 0;
-    /**
-     * <code>int32 player_num = 1;</code>
-     * @return The playerNum.
-     */
-    @java.lang.Override
-    public int getPlayerNum() {
-      return playerNum_;
-    }
-
-    public static final int ROOM_STATUS_FIELD_NUMBER = 3;
+    public static final int ROOM_STATUS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object roomStatus_ = "";
     /**
-     * <code>string room_status = 3;</code>
+     * <code>string room_status = 1;</code>
      * @return The roomStatus.
      */
     @java.lang.Override
@@ -6044,7 +7429,7 @@ public final class ServerClient {
       }
     }
     /**
-     * <code>string room_status = 3;</code>
+     * <code>string room_status = 1;</code>
      * @return The bytes for roomStatus.
      */
     @java.lang.Override
@@ -6076,11 +7461,8 @@ public final class ServerClient {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (playerNum_ != 0) {
-        output.writeInt32(1, playerNum_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomStatus_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, roomStatus_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, roomStatus_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -6091,12 +7473,8 @@ public final class ServerClient {
       if (size != -1) return size;
 
       size = 0;
-      if (playerNum_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, playerNum_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomStatus_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, roomStatus_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, roomStatus_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6108,13 +7486,11 @@ public final class ServerClient {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ServerClient.RoomStatusInform)) {
+      if (!(obj instanceof ServerClient.RoomStatusResponse)) {
         return super.equals(obj);
       }
-      ServerClient.RoomStatusInform other = (ServerClient.RoomStatusInform) obj;
+      ServerClient.RoomStatusResponse other = (ServerClient.RoomStatusResponse) obj;
 
-      if (getPlayerNum()
-          != other.getPlayerNum()) return false;
       if (!getRoomStatus()
           .equals(other.getRoomStatus())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -6128,8 +7504,6 @@ public final class ServerClient {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PLAYER_NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getPlayerNum();
       hash = (37 * hash) + ROOM_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getRoomStatus().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -6137,69 +7511,69 @@ public final class ServerClient {
       return hash;
     }
 
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ServerClient.RoomStatusInform parseFrom(byte[] data)
+    public static ServerClient.RoomStatusResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ServerClient.RoomStatusInform parseFrom(java.io.InputStream input)
+    public static ServerClient.RoomStatusResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ServerClient.RoomStatusInform parseDelimitedFrom(java.io.InputStream input)
+    public static ServerClient.RoomStatusResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ServerClient.RoomStatusInform parseDelimitedFrom(
+    public static ServerClient.RoomStatusResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ServerClient.RoomStatusInform parseFrom(
+    public static ServerClient.RoomStatusResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6212,7 +7586,7 @@ public final class ServerClient {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ServerClient.RoomStatusInform prototype) {
+    public static Builder newBuilder(ServerClient.RoomStatusResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6233,26 +7607,26 @@ public final class ServerClient {
      * both after people join and people ready to start
      * </pre>
      *
-     * Protobuf type {@code RoomStatusInform}
+     * Protobuf type {@code RoomStatusResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:RoomStatusInform)
-        ServerClient.RoomStatusInformOrBuilder {
+        // @@protoc_insertion_point(builder_implements:RoomStatusResponse)
+        ServerClient.RoomStatusResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ServerClient.internal_static_RoomStatusInform_descriptor;
+        return ServerClient.internal_static_RoomStatusResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ServerClient.internal_static_RoomStatusInform_fieldAccessorTable
+        return ServerClient.internal_static_RoomStatusResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ServerClient.RoomStatusInform.class, ServerClient.RoomStatusInform.Builder.class);
+                ServerClient.RoomStatusResponse.class, ServerClient.RoomStatusResponse.Builder.class);
       }
 
-      // Construct using ServerClient.RoomStatusInform.newBuilder()
+      // Construct using ServerClient.RoomStatusResponse.newBuilder()
       private Builder() {
 
       }
@@ -6266,7 +7640,6 @@ public final class ServerClient {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        playerNum_ = 0;
         roomStatus_ = "";
         return this;
       }
@@ -6274,17 +7647,17 @@ public final class ServerClient {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ServerClient.internal_static_RoomStatusInform_descriptor;
+        return ServerClient.internal_static_RoomStatusResponse_descriptor;
       }
 
       @java.lang.Override
-      public ServerClient.RoomStatusInform getDefaultInstanceForType() {
-        return ServerClient.RoomStatusInform.getDefaultInstance();
+      public ServerClient.RoomStatusResponse getDefaultInstanceForType() {
+        return ServerClient.RoomStatusResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ServerClient.RoomStatusInform build() {
-        ServerClient.RoomStatusInform result = buildPartial();
+      public ServerClient.RoomStatusResponse build() {
+        ServerClient.RoomStatusResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6292,19 +7665,16 @@ public final class ServerClient {
       }
 
       @java.lang.Override
-      public ServerClient.RoomStatusInform buildPartial() {
-        ServerClient.RoomStatusInform result = new ServerClient.RoomStatusInform(this);
+      public ServerClient.RoomStatusResponse buildPartial() {
+        ServerClient.RoomStatusResponse result = new ServerClient.RoomStatusResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(ServerClient.RoomStatusInform result) {
+      private void buildPartial0(ServerClient.RoomStatusResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.playerNum_ = playerNum_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.roomStatus_ = roomStatus_;
         }
       }
@@ -6343,22 +7713,19 @@ public final class ServerClient {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ServerClient.RoomStatusInform) {
-          return mergeFrom((ServerClient.RoomStatusInform)other);
+        if (other instanceof ServerClient.RoomStatusResponse) {
+          return mergeFrom((ServerClient.RoomStatusResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ServerClient.RoomStatusInform other) {
-        if (other == ServerClient.RoomStatusInform.getDefaultInstance()) return this;
-        if (other.getPlayerNum() != 0) {
-          setPlayerNum(other.getPlayerNum());
-        }
+      public Builder mergeFrom(ServerClient.RoomStatusResponse other) {
+        if (other == ServerClient.RoomStatusResponse.getDefaultInstance()) return this;
         if (!other.getRoomStatus().isEmpty()) {
           roomStatus_ = other.roomStatus_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -6387,16 +7754,11 @@ public final class ServerClient {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                playerNum_ = input.readInt32();
+              case 10: {
+                roomStatus_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 8
-              case 26: {
-                roomStatus_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 26
+              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6414,41 +7776,9 @@ public final class ServerClient {
       }
       private int bitField0_;
 
-      private int playerNum_ ;
-      /**
-       * <code>int32 player_num = 1;</code>
-       * @return The playerNum.
-       */
-      @java.lang.Override
-      public int getPlayerNum() {
-        return playerNum_;
-      }
-      /**
-       * <code>int32 player_num = 1;</code>
-       * @param value The playerNum to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPlayerNum(int value) {
-        
-        playerNum_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 player_num = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPlayerNum() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        playerNum_ = 0;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object roomStatus_ = "";
       /**
-       * <code>string room_status = 3;</code>
+       * <code>string room_status = 1;</code>
        * @return The roomStatus.
        */
       public java.lang.String getRoomStatus() {
@@ -6464,7 +7794,7 @@ public final class ServerClient {
         }
       }
       /**
-       * <code>string room_status = 3;</code>
+       * <code>string room_status = 1;</code>
        * @return The bytes for roomStatus.
        */
       public com.google.protobuf.ByteString
@@ -6481,7 +7811,7 @@ public final class ServerClient {
         }
       }
       /**
-       * <code>string room_status = 3;</code>
+       * <code>string room_status = 1;</code>
        * @param value The roomStatus to set.
        * @return This builder for chaining.
        */
@@ -6489,22 +7819,22 @@ public final class ServerClient {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         roomStatus_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string room_status = 3;</code>
+       * <code>string room_status = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRoomStatus() {
         roomStatus_ = getDefaultInstance().getRoomStatus();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string room_status = 3;</code>
+       * <code>string room_status = 1;</code>
        * @param value The bytes for roomStatus to set.
        * @return This builder for chaining.
        */
@@ -6513,7 +7843,7 @@ public final class ServerClient {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         roomStatus_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6530,23 +7860,23 @@ public final class ServerClient {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:RoomStatusInform)
+      // @@protoc_insertion_point(builder_scope:RoomStatusResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:RoomStatusInform)
-    private static final ServerClient.RoomStatusInform DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:RoomStatusResponse)
+    private static final ServerClient.RoomStatusResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ServerClient.RoomStatusInform();
+      DEFAULT_INSTANCE = new ServerClient.RoomStatusResponse();
     }
 
-    public static ServerClient.RoomStatusInform getDefaultInstance() {
+    public static ServerClient.RoomStatusResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoomStatusInform>
-        PARSER = new com.google.protobuf.AbstractParser<RoomStatusInform>() {
+    private static final com.google.protobuf.Parser<RoomStatusResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RoomStatusResponse>() {
       @java.lang.Override
-      public RoomStatusInform parsePartialFrom(
+      public RoomStatusResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6565,17 +7895,17 @@ public final class ServerClient {
       }
     };
 
-    public static com.google.protobuf.Parser<RoomStatusInform> parser() {
+    public static com.google.protobuf.Parser<RoomStatusResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<RoomStatusInform> getParserForType() {
+    public com.google.protobuf.Parser<RoomStatusResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ServerClient.RoomStatusInform getDefaultInstanceForType() {
+    public ServerClient.RoomStatusResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7010,15 +8340,20 @@ public final class ServerClient {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_RoomJoinResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_GameStartResponse_descriptor;
+    internal_static_JoinerReadyResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_GameStartResponse_fieldAccessorTable;
+      internal_static_JoinerReadyResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_RoomStatusInform_descriptor;
+    internal_static_OwnerStartGameResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_RoomStatusInform_fieldAccessorTable;
+      internal_static_OwnerStartGameResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_RoomStatusResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_RoomStatusResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_GameStartInform_descriptor;
   private static final 
@@ -7033,24 +8368,29 @@ public final class ServerClient {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022ServerClient.proto\"\231\002\n\005SCmsg\022+\n\020idCrea" +
+      "\n\022ServerClient.proto\"\332\002\n\005SCmsg\022+\n\020idCrea" +
       "teResponse\030\001 \003(\0132\021.IdCreateResponse\022/\n\022r" +
       "oomCreateResponse\030\002 \003(\0132\023.RoomCreateResp" +
       "onse\022+\n\020roomJoinResponse\030\003 \003(\0132\021.RoomJoi" +
-      "nResponse\022-\n\021gameStartResponse\030\004 \003(\0132\022.G" +
-      "ameStartResponse\022+\n\020roomStatusInform\030\005 \003" +
-      "(\0132\021.RoomStatusInform\022)\n\017gameStartInform" +
-      "\030\006 \003(\0132\020.GameStartInform\"@\n\020IdCreateResp" +
-      "onse\022\027\n\006status\030\001 \001(\0162\007.Status\022\023\n\013fail_re" +
-      "ason\030\002 \001(\t\"U\n\022RoomCreateResponse\022\027\n\006stat" +
-      "us\030\001 \001(\0162\007.Status\022\021\n\troom_code\030\004 \001(\t\022\023\n\013" +
-      "fail_reason\030\005 \001(\t\"@\n\020RoomJoinResponse\022\027\n" +
-      "\006status\030\001 \001(\0162\007.Status\022\023\n\013fail_reason\030\004 " +
-      "\001(\t\"A\n\021GameStartResponse\022\027\n\006status\030\001 \001(\016" +
-      "2\007.Status\022\023\n\013fail_reason\030\002 \001(\t\";\n\020RoomSt" +
-      "atusInform\022\022\n\nplayer_num\030\001 \001(\005\022\023\n\013room_s" +
-      "tatus\030\003 \001(\t\"\021\n\017GameStartInform*\"\n\006Status" +
-      "\022\013\n\007SUCCESS\020\000\022\013\n\007FAILURE\020\001b\006proto3"
+      "nResponse\0221\n\023joinerReadyResponse\030\004 \003(\0132\024" +
+      ".JoinerReadyResponse\0227\n\026ownerStartGameRe" +
+      "sponse\030\005 \003(\0132\027.OwnerStartGameResponse\022/\n" +
+      "\022roomStatusResponse\030\006 \003(\0132\023.RoomStatusRe" +
+      "sponse\022)\n\017gameStartInform\030\007 \003(\0132\020.GameSt" +
+      "artInform\"@\n\020IdCreateResponse\022\027\n\006status\030" +
+      "\001 \001(\0162\007.Status\022\023\n\013fail_reason\030\002 \001(\t\"n\n\022R" +
+      "oomCreateResponse\022\027\n\006status\030\001 \001(\0162\007.Stat" +
+      "us\022\021\n\troom_code\030\002 \001(\t\022\027\n\017room_owner_name" +
+      "\030\003 \001(\t\022\023\n\013fail_reason\030\004 \001(\t\"Y\n\020RoomJoinR" +
+      "esponse\022\027\n\006status\030\001 \001(\0162\007.Status\022\027\n\017room" +
+      "_owner_name\030\002 \001(\t\022\023\n\013fail_reason\030\003 \001(\t\"C" +
+      "\n\023JoinerReadyResponse\022\027\n\006status\030\001 \001(\0162\007." +
+      "Status\022\023\n\013fail_reason\030\002 \001(\t\"F\n\026OwnerStar" +
+      "tGameResponse\022\027\n\006status\030\001 \001(\0162\007.Status\022\023" +
+      "\n\013fail_reason\030\002 \001(\t\")\n\022RoomStatusRespons" +
+      "e\022\023\n\013room_status\030\001 \001(\t\"\021\n\017GameStartInfor" +
+      "m*\"\n\006Status\022\013\n\007SUCCESS\020\000\022\013\n\007FAILURE\020\001b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7061,7 +8401,7 @@ public final class ServerClient {
     internal_static_SCmsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_SCmsg_descriptor,
-        new java.lang.String[] { "IdCreateResponse", "RoomCreateResponse", "RoomJoinResponse", "GameStartResponse", "RoomStatusInform", "GameStartInform", });
+        new java.lang.String[] { "IdCreateResponse", "RoomCreateResponse", "RoomJoinResponse", "JoinerReadyResponse", "OwnerStartGameResponse", "RoomStatusResponse", "GameStartInform", });
     internal_static_IdCreateResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_IdCreateResponse_fieldAccessorTable = new
@@ -7073,27 +8413,33 @@ public final class ServerClient {
     internal_static_RoomCreateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RoomCreateResponse_descriptor,
-        new java.lang.String[] { "Status", "RoomCode", "FailReason", });
+        new java.lang.String[] { "Status", "RoomCode", "RoomOwnerName", "FailReason", });
     internal_static_RoomJoinResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_RoomJoinResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RoomJoinResponse_descriptor,
-        new java.lang.String[] { "Status", "FailReason", });
-    internal_static_GameStartResponse_descriptor =
+        new java.lang.String[] { "Status", "RoomOwnerName", "FailReason", });
+    internal_static_JoinerReadyResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_GameStartResponse_fieldAccessorTable = new
+    internal_static_JoinerReadyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_GameStartResponse_descriptor,
+        internal_static_JoinerReadyResponse_descriptor,
         new java.lang.String[] { "Status", "FailReason", });
-    internal_static_RoomStatusInform_descriptor =
+    internal_static_OwnerStartGameResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_RoomStatusInform_fieldAccessorTable = new
+    internal_static_OwnerStartGameResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_RoomStatusInform_descriptor,
-        new java.lang.String[] { "PlayerNum", "RoomStatus", });
-    internal_static_GameStartInform_descriptor =
+        internal_static_OwnerStartGameResponse_descriptor,
+        new java.lang.String[] { "Status", "FailReason", });
+    internal_static_RoomStatusResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_RoomStatusResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_RoomStatusResponse_descriptor,
+        new java.lang.String[] { "RoomStatus", });
+    internal_static_GameStartInform_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_GameStartInform_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GameStartInform_descriptor,

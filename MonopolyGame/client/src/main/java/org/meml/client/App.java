@@ -32,9 +32,12 @@ public class App {
             logger.error("Server hostname and listening port config not found in config file");
             return;
         }
-        Client client = new Client(System.out, input, serverHostname, serverListeningPort);
-        client.send("ping");
-        client.receive();
-        client.outputCurrentMsg();
+        try {
+            Client client = new Client(System.out, input, serverHostname, serverListeningPort);
+            client.run();
+        } catch (Exception e) {
+            logger.error(String.format("Client exited with exception:%s", e.getMessage()));
+        }
+
     }
 }

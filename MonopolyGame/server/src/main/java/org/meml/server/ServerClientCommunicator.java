@@ -15,8 +15,14 @@ public class ServerClientCommunicator {
     private static final Logger logger = LogManager.getLogger(ServerClientCommunicator.class);
 
     public ServerClientCommunicator(Socket socket) throws IOException {
-        this.input = socket.getInputStream();
-        this.output = socket.getOutputStream();
+        try{
+            this.input = socket.getInputStream();
+            this.output = socket.getOutputStream();
+            logger.info("Succeed to get input and output from socket connection");
+        }catch(IOException e) {
+            logger.error("Failed to get input and output from socket connection");
+            throw e;
+        }
     }
 
     /**
@@ -39,13 +45,13 @@ public class ServerClientCommunicator {
      */
     public ClientServer.CSmsg receive(){
         try{
-            ClientServer.CSmsg msg =  ClientServer.CSmsg.parseDelimitedFrom(this.input);
-            while (msg == null) {
-                msg =  ClientServer.CSmsg.parseDelimitedFrom(this.input);
+            ClientServer.CSmsg csMsg =  ClientServer.CSmsg.parseDelimitedFrom(this.input);
+            while (csMsg == null) {
+                csMsg =  ClientServer.CSmsg.parseDelimitedFrom(this.input);
             }
-            return msg;
+            return csMsg;
         }catch(IOException e) {
-            logger.error("Fail to receive msg");
+            logger.error("Fail to receive csMsg");
         }
         return null;
     }

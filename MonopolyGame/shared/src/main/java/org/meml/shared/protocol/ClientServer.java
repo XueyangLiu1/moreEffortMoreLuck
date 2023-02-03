@@ -203,27 +203,75 @@ public final class ClientServer {
         int index);
 
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
-    java.util.List<ClientServer.GameStartRequest> 
-        getGameStartRequestList();
+    java.util.List<ClientServer.JoinerReadyRequest> 
+        getJoinerReadyRequestList();
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
-    ClientServer.GameStartRequest getGameStartRequest(int index);
+    ClientServer.JoinerReadyRequest getJoinerReadyRequest(int index);
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
-    int getGameStartRequestCount();
+    int getJoinerReadyRequestCount();
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
-    java.util.List<? extends ClientServer.GameStartRequestOrBuilder> 
-        getGameStartRequestOrBuilderList();
+    java.util.List<? extends ClientServer.JoinerReadyRequestOrBuilder> 
+        getJoinerReadyRequestOrBuilderList();
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
-    ClientServer.GameStartRequestOrBuilder getGameStartRequestOrBuilder(
+    ClientServer.JoinerReadyRequestOrBuilder getJoinerReadyRequestOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    java.util.List<ClientServer.OwnerStartGameRequest> 
+        getOwnerStartGameRequestList();
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    ClientServer.OwnerStartGameRequest getOwnerStartGameRequest(int index);
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    int getOwnerStartGameRequestCount();
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    java.util.List<? extends ClientServer.OwnerStartGameRequestOrBuilder> 
+        getOwnerStartGameRequestOrBuilderList();
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    ClientServer.OwnerStartGameRequestOrBuilder getOwnerStartGameRequestOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    java.util.List<ClientServer.RoomStatusRequest> 
+        getRoomStatusRequestList();
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    ClientServer.RoomStatusRequest getRoomStatusRequest(int index);
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    int getRoomStatusRequestCount();
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    java.util.List<? extends ClientServer.RoomStatusRequestOrBuilder> 
+        getRoomStatusRequestOrBuilderList();
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    ClientServer.RoomStatusRequestOrBuilder getRoomStatusRequestOrBuilder(
         int index);
   }
   /**
@@ -246,7 +294,9 @@ public final class ClientServer {
       idCreateRequest_ = java.util.Collections.emptyList();
       roomCreateRequest_ = java.util.Collections.emptyList();
       roomJoinRequest_ = java.util.Collections.emptyList();
-      gameStartRequest_ = java.util.Collections.emptyList();
+      joinerReadyRequest_ = java.util.Collections.emptyList();
+      ownerStartGameRequest_ = java.util.Collections.emptyList();
+      roomStatusRequest_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -397,45 +447,127 @@ public final class ClientServer {
       return roomJoinRequest_.get(index);
     }
 
-    public static final int GAMESTARTREQUEST_FIELD_NUMBER = 4;
+    public static final int JOINERREADYREQUEST_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private java.util.List<ClientServer.GameStartRequest> gameStartRequest_;
+    private java.util.List<ClientServer.JoinerReadyRequest> joinerReadyRequest_;
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<ClientServer.GameStartRequest> getGameStartRequestList() {
-      return gameStartRequest_;
+    public java.util.List<ClientServer.JoinerReadyRequest> getJoinerReadyRequestList() {
+      return joinerReadyRequest_;
     }
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends ClientServer.GameStartRequestOrBuilder> 
-        getGameStartRequestOrBuilderList() {
-      return gameStartRequest_;
+    public java.util.List<? extends ClientServer.JoinerReadyRequestOrBuilder> 
+        getJoinerReadyRequestOrBuilderList() {
+      return joinerReadyRequest_;
     }
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
     @java.lang.Override
-    public int getGameStartRequestCount() {
-      return gameStartRequest_.size();
+    public int getJoinerReadyRequestCount() {
+      return joinerReadyRequest_.size();
     }
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
     @java.lang.Override
-    public ClientServer.GameStartRequest getGameStartRequest(int index) {
-      return gameStartRequest_.get(index);
+    public ClientServer.JoinerReadyRequest getJoinerReadyRequest(int index) {
+      return joinerReadyRequest_.get(index);
     }
     /**
-     * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+     * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
      */
     @java.lang.Override
-    public ClientServer.GameStartRequestOrBuilder getGameStartRequestOrBuilder(
+    public ClientServer.JoinerReadyRequestOrBuilder getJoinerReadyRequestOrBuilder(
         int index) {
-      return gameStartRequest_.get(index);
+      return joinerReadyRequest_.get(index);
+    }
+
+    public static final int OWNERSTARTGAMEREQUEST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<ClientServer.OwnerStartGameRequest> ownerStartGameRequest_;
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ClientServer.OwnerStartGameRequest> getOwnerStartGameRequestList() {
+      return ownerStartGameRequest_;
+    }
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ClientServer.OwnerStartGameRequestOrBuilder> 
+        getOwnerStartGameRequestOrBuilderList() {
+      return ownerStartGameRequest_;
+    }
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    @java.lang.Override
+    public int getOwnerStartGameRequestCount() {
+      return ownerStartGameRequest_.size();
+    }
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    @java.lang.Override
+    public ClientServer.OwnerStartGameRequest getOwnerStartGameRequest(int index) {
+      return ownerStartGameRequest_.get(index);
+    }
+    /**
+     * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+     */
+    @java.lang.Override
+    public ClientServer.OwnerStartGameRequestOrBuilder getOwnerStartGameRequestOrBuilder(
+        int index) {
+      return ownerStartGameRequest_.get(index);
+    }
+
+    public static final int ROOMSTATUSREQUEST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<ClientServer.RoomStatusRequest> roomStatusRequest_;
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ClientServer.RoomStatusRequest> getRoomStatusRequestList() {
+      return roomStatusRequest_;
+    }
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ClientServer.RoomStatusRequestOrBuilder> 
+        getRoomStatusRequestOrBuilderList() {
+      return roomStatusRequest_;
+    }
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    @java.lang.Override
+    public int getRoomStatusRequestCount() {
+      return roomStatusRequest_.size();
+    }
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    @java.lang.Override
+    public ClientServer.RoomStatusRequest getRoomStatusRequest(int index) {
+      return roomStatusRequest_.get(index);
+    }
+    /**
+     * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+     */
+    @java.lang.Override
+    public ClientServer.RoomStatusRequestOrBuilder getRoomStatusRequestOrBuilder(
+        int index) {
+      return roomStatusRequest_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -461,8 +593,14 @@ public final class ClientServer {
       for (int i = 0; i < roomJoinRequest_.size(); i++) {
         output.writeMessage(3, roomJoinRequest_.get(i));
       }
-      for (int i = 0; i < gameStartRequest_.size(); i++) {
-        output.writeMessage(4, gameStartRequest_.get(i));
+      for (int i = 0; i < joinerReadyRequest_.size(); i++) {
+        output.writeMessage(4, joinerReadyRequest_.get(i));
+      }
+      for (int i = 0; i < ownerStartGameRequest_.size(); i++) {
+        output.writeMessage(5, ownerStartGameRequest_.get(i));
+      }
+      for (int i = 0; i < roomStatusRequest_.size(); i++) {
+        output.writeMessage(6, roomStatusRequest_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -485,9 +623,17 @@ public final class ClientServer {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, roomJoinRequest_.get(i));
       }
-      for (int i = 0; i < gameStartRequest_.size(); i++) {
+      for (int i = 0; i < joinerReadyRequest_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, gameStartRequest_.get(i));
+          .computeMessageSize(4, joinerReadyRequest_.get(i));
+      }
+      for (int i = 0; i < ownerStartGameRequest_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, ownerStartGameRequest_.get(i));
+      }
+      for (int i = 0; i < roomStatusRequest_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, roomStatusRequest_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -510,8 +656,12 @@ public final class ClientServer {
           .equals(other.getRoomCreateRequestList())) return false;
       if (!getRoomJoinRequestList()
           .equals(other.getRoomJoinRequestList())) return false;
-      if (!getGameStartRequestList()
-          .equals(other.getGameStartRequestList())) return false;
+      if (!getJoinerReadyRequestList()
+          .equals(other.getJoinerReadyRequestList())) return false;
+      if (!getOwnerStartGameRequestList()
+          .equals(other.getOwnerStartGameRequestList())) return false;
+      if (!getRoomStatusRequestList()
+          .equals(other.getRoomStatusRequestList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -535,9 +685,17 @@ public final class ClientServer {
         hash = (37 * hash) + ROOMJOINREQUEST_FIELD_NUMBER;
         hash = (53 * hash) + getRoomJoinRequestList().hashCode();
       }
-      if (getGameStartRequestCount() > 0) {
-        hash = (37 * hash) + GAMESTARTREQUEST_FIELD_NUMBER;
-        hash = (53 * hash) + getGameStartRequestList().hashCode();
+      if (getJoinerReadyRequestCount() > 0) {
+        hash = (37 * hash) + JOINERREADYREQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getJoinerReadyRequestList().hashCode();
+      }
+      if (getOwnerStartGameRequestCount() > 0) {
+        hash = (37 * hash) + OWNERSTARTGAMEREQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getOwnerStartGameRequestList().hashCode();
+      }
+      if (getRoomStatusRequestCount() > 0) {
+        hash = (37 * hash) + ROOMSTATUSREQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getRoomStatusRequestList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -693,13 +851,27 @@ public final class ClientServer {
           roomJoinRequestBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (gameStartRequestBuilder_ == null) {
-          gameStartRequest_ = java.util.Collections.emptyList();
+        if (joinerReadyRequestBuilder_ == null) {
+          joinerReadyRequest_ = java.util.Collections.emptyList();
         } else {
-          gameStartRequest_ = null;
-          gameStartRequestBuilder_.clear();
+          joinerReadyRequest_ = null;
+          joinerReadyRequestBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (ownerStartGameRequestBuilder_ == null) {
+          ownerStartGameRequest_ = java.util.Collections.emptyList();
+        } else {
+          ownerStartGameRequest_ = null;
+          ownerStartGameRequestBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (roomStatusRequestBuilder_ == null) {
+          roomStatusRequest_ = java.util.Collections.emptyList();
+        } else {
+          roomStatusRequest_ = null;
+          roomStatusRequestBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -760,14 +932,32 @@ public final class ClientServer {
         } else {
           result.roomJoinRequest_ = roomJoinRequestBuilder_.build();
         }
-        if (gameStartRequestBuilder_ == null) {
+        if (joinerReadyRequestBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0)) {
-            gameStartRequest_ = java.util.Collections.unmodifiableList(gameStartRequest_);
+            joinerReadyRequest_ = java.util.Collections.unmodifiableList(joinerReadyRequest_);
             bitField0_ = (bitField0_ & ~0x00000008);
           }
-          result.gameStartRequest_ = gameStartRequest_;
+          result.joinerReadyRequest_ = joinerReadyRequest_;
         } else {
-          result.gameStartRequest_ = gameStartRequestBuilder_.build();
+          result.joinerReadyRequest_ = joinerReadyRequestBuilder_.build();
+        }
+        if (ownerStartGameRequestBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            ownerStartGameRequest_ = java.util.Collections.unmodifiableList(ownerStartGameRequest_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.ownerStartGameRequest_ = ownerStartGameRequest_;
+        } else {
+          result.ownerStartGameRequest_ = ownerStartGameRequestBuilder_.build();
+        }
+        if (roomStatusRequestBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            roomStatusRequest_ = java.util.Collections.unmodifiableList(roomStatusRequest_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.roomStatusRequest_ = roomStatusRequest_;
+        } else {
+          result.roomStatusRequest_ = roomStatusRequestBuilder_.build();
         }
       }
 
@@ -897,29 +1087,81 @@ public final class ClientServer {
             }
           }
         }
-        if (gameStartRequestBuilder_ == null) {
-          if (!other.gameStartRequest_.isEmpty()) {
-            if (gameStartRequest_.isEmpty()) {
-              gameStartRequest_ = other.gameStartRequest_;
+        if (joinerReadyRequestBuilder_ == null) {
+          if (!other.joinerReadyRequest_.isEmpty()) {
+            if (joinerReadyRequest_.isEmpty()) {
+              joinerReadyRequest_ = other.joinerReadyRequest_;
               bitField0_ = (bitField0_ & ~0x00000008);
             } else {
-              ensureGameStartRequestIsMutable();
-              gameStartRequest_.addAll(other.gameStartRequest_);
+              ensureJoinerReadyRequestIsMutable();
+              joinerReadyRequest_.addAll(other.joinerReadyRequest_);
             }
             onChanged();
           }
         } else {
-          if (!other.gameStartRequest_.isEmpty()) {
-            if (gameStartRequestBuilder_.isEmpty()) {
-              gameStartRequestBuilder_.dispose();
-              gameStartRequestBuilder_ = null;
-              gameStartRequest_ = other.gameStartRequest_;
+          if (!other.joinerReadyRequest_.isEmpty()) {
+            if (joinerReadyRequestBuilder_.isEmpty()) {
+              joinerReadyRequestBuilder_.dispose();
+              joinerReadyRequestBuilder_ = null;
+              joinerReadyRequest_ = other.joinerReadyRequest_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              gameStartRequestBuilder_ = 
+              joinerReadyRequestBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getGameStartRequestFieldBuilder() : null;
+                   getJoinerReadyRequestFieldBuilder() : null;
             } else {
-              gameStartRequestBuilder_.addAllMessages(other.gameStartRequest_);
+              joinerReadyRequestBuilder_.addAllMessages(other.joinerReadyRequest_);
+            }
+          }
+        }
+        if (ownerStartGameRequestBuilder_ == null) {
+          if (!other.ownerStartGameRequest_.isEmpty()) {
+            if (ownerStartGameRequest_.isEmpty()) {
+              ownerStartGameRequest_ = other.ownerStartGameRequest_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureOwnerStartGameRequestIsMutable();
+              ownerStartGameRequest_.addAll(other.ownerStartGameRequest_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ownerStartGameRequest_.isEmpty()) {
+            if (ownerStartGameRequestBuilder_.isEmpty()) {
+              ownerStartGameRequestBuilder_.dispose();
+              ownerStartGameRequestBuilder_ = null;
+              ownerStartGameRequest_ = other.ownerStartGameRequest_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              ownerStartGameRequestBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOwnerStartGameRequestFieldBuilder() : null;
+            } else {
+              ownerStartGameRequestBuilder_.addAllMessages(other.ownerStartGameRequest_);
+            }
+          }
+        }
+        if (roomStatusRequestBuilder_ == null) {
+          if (!other.roomStatusRequest_.isEmpty()) {
+            if (roomStatusRequest_.isEmpty()) {
+              roomStatusRequest_ = other.roomStatusRequest_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureRoomStatusRequestIsMutable();
+              roomStatusRequest_.addAll(other.roomStatusRequest_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.roomStatusRequest_.isEmpty()) {
+            if (roomStatusRequestBuilder_.isEmpty()) {
+              roomStatusRequestBuilder_.dispose();
+              roomStatusRequestBuilder_ = null;
+              roomStatusRequest_ = other.roomStatusRequest_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              roomStatusRequestBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRoomStatusRequestFieldBuilder() : null;
+            } else {
+              roomStatusRequestBuilder_.addAllMessages(other.roomStatusRequest_);
             }
           }
         }
@@ -989,18 +1231,44 @@ public final class ClientServer {
                 break;
               } // case 26
               case 34: {
-                ClientServer.GameStartRequest m =
+                ClientServer.JoinerReadyRequest m =
                     input.readMessage(
-                        ClientServer.GameStartRequest.parser(),
+                        ClientServer.JoinerReadyRequest.parser(),
                         extensionRegistry);
-                if (gameStartRequestBuilder_ == null) {
-                  ensureGameStartRequestIsMutable();
-                  gameStartRequest_.add(m);
+                if (joinerReadyRequestBuilder_ == null) {
+                  ensureJoinerReadyRequestIsMutable();
+                  joinerReadyRequest_.add(m);
                 } else {
-                  gameStartRequestBuilder_.addMessage(m);
+                  joinerReadyRequestBuilder_.addMessage(m);
                 }
                 break;
               } // case 34
+              case 42: {
+                ClientServer.OwnerStartGameRequest m =
+                    input.readMessage(
+                        ClientServer.OwnerStartGameRequest.parser(),
+                        extensionRegistry);
+                if (ownerStartGameRequestBuilder_ == null) {
+                  ensureOwnerStartGameRequestIsMutable();
+                  ownerStartGameRequest_.add(m);
+                } else {
+                  ownerStartGameRequestBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                ClientServer.RoomStatusRequest m =
+                    input.readMessage(
+                        ClientServer.RoomStatusRequest.parser(),
+                        extensionRegistry);
+                if (roomStatusRequestBuilder_ == null) {
+                  ensureRoomStatusRequestIsMutable();
+                  roomStatusRequest_.add(m);
+                } else {
+                  roomStatusRequestBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1738,244 +2006,724 @@ public final class ClientServer {
         return roomJoinRequestBuilder_;
       }
 
-      private java.util.List<ClientServer.GameStartRequest> gameStartRequest_ =
+      private java.util.List<ClientServer.JoinerReadyRequest> joinerReadyRequest_ =
         java.util.Collections.emptyList();
-      private void ensureGameStartRequestIsMutable() {
+      private void ensureJoinerReadyRequestIsMutable() {
         if (!((bitField0_ & 0x00000008) != 0)) {
-          gameStartRequest_ = new java.util.ArrayList<ClientServer.GameStartRequest>(gameStartRequest_);
+          joinerReadyRequest_ = new java.util.ArrayList<ClientServer.JoinerReadyRequest>(joinerReadyRequest_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ClientServer.GameStartRequest, ClientServer.GameStartRequest.Builder, ClientServer.GameStartRequestOrBuilder> gameStartRequestBuilder_;
+          ClientServer.JoinerReadyRequest, ClientServer.JoinerReadyRequest.Builder, ClientServer.JoinerReadyRequestOrBuilder> joinerReadyRequestBuilder_;
 
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public java.util.List<ClientServer.GameStartRequest> getGameStartRequestList() {
-        if (gameStartRequestBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(gameStartRequest_);
+      public java.util.List<ClientServer.JoinerReadyRequest> getJoinerReadyRequestList() {
+        if (joinerReadyRequestBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(joinerReadyRequest_);
         } else {
-          return gameStartRequestBuilder_.getMessageList();
+          return joinerReadyRequestBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public int getGameStartRequestCount() {
-        if (gameStartRequestBuilder_ == null) {
-          return gameStartRequest_.size();
+      public int getJoinerReadyRequestCount() {
+        if (joinerReadyRequestBuilder_ == null) {
+          return joinerReadyRequest_.size();
         } else {
-          return gameStartRequestBuilder_.getCount();
+          return joinerReadyRequestBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public ClientServer.GameStartRequest getGameStartRequest(int index) {
-        if (gameStartRequestBuilder_ == null) {
-          return gameStartRequest_.get(index);
+      public ClientServer.JoinerReadyRequest getJoinerReadyRequest(int index) {
+        if (joinerReadyRequestBuilder_ == null) {
+          return joinerReadyRequest_.get(index);
         } else {
-          return gameStartRequestBuilder_.getMessage(index);
+          return joinerReadyRequestBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder setGameStartRequest(
-          int index, ClientServer.GameStartRequest value) {
-        if (gameStartRequestBuilder_ == null) {
+      public Builder setJoinerReadyRequest(
+          int index, ClientServer.JoinerReadyRequest value) {
+        if (joinerReadyRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureGameStartRequestIsMutable();
-          gameStartRequest_.set(index, value);
+          ensureJoinerReadyRequestIsMutable();
+          joinerReadyRequest_.set(index, value);
           onChanged();
         } else {
-          gameStartRequestBuilder_.setMessage(index, value);
+          joinerReadyRequestBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder setGameStartRequest(
-          int index, ClientServer.GameStartRequest.Builder builderForValue) {
-        if (gameStartRequestBuilder_ == null) {
-          ensureGameStartRequestIsMutable();
-          gameStartRequest_.set(index, builderForValue.build());
+      public Builder setJoinerReadyRequest(
+          int index, ClientServer.JoinerReadyRequest.Builder builderForValue) {
+        if (joinerReadyRequestBuilder_ == null) {
+          ensureJoinerReadyRequestIsMutable();
+          joinerReadyRequest_.set(index, builderForValue.build());
           onChanged();
         } else {
-          gameStartRequestBuilder_.setMessage(index, builderForValue.build());
+          joinerReadyRequestBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder addGameStartRequest(ClientServer.GameStartRequest value) {
-        if (gameStartRequestBuilder_ == null) {
+      public Builder addJoinerReadyRequest(ClientServer.JoinerReadyRequest value) {
+        if (joinerReadyRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureGameStartRequestIsMutable();
-          gameStartRequest_.add(value);
+          ensureJoinerReadyRequestIsMutable();
+          joinerReadyRequest_.add(value);
           onChanged();
         } else {
-          gameStartRequestBuilder_.addMessage(value);
+          joinerReadyRequestBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder addGameStartRequest(
-          int index, ClientServer.GameStartRequest value) {
-        if (gameStartRequestBuilder_ == null) {
+      public Builder addJoinerReadyRequest(
+          int index, ClientServer.JoinerReadyRequest value) {
+        if (joinerReadyRequestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureGameStartRequestIsMutable();
-          gameStartRequest_.add(index, value);
+          ensureJoinerReadyRequestIsMutable();
+          joinerReadyRequest_.add(index, value);
           onChanged();
         } else {
-          gameStartRequestBuilder_.addMessage(index, value);
+          joinerReadyRequestBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder addGameStartRequest(
-          ClientServer.GameStartRequest.Builder builderForValue) {
-        if (gameStartRequestBuilder_ == null) {
-          ensureGameStartRequestIsMutable();
-          gameStartRequest_.add(builderForValue.build());
+      public Builder addJoinerReadyRequest(
+          ClientServer.JoinerReadyRequest.Builder builderForValue) {
+        if (joinerReadyRequestBuilder_ == null) {
+          ensureJoinerReadyRequestIsMutable();
+          joinerReadyRequest_.add(builderForValue.build());
           onChanged();
         } else {
-          gameStartRequestBuilder_.addMessage(builderForValue.build());
+          joinerReadyRequestBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder addGameStartRequest(
-          int index, ClientServer.GameStartRequest.Builder builderForValue) {
-        if (gameStartRequestBuilder_ == null) {
-          ensureGameStartRequestIsMutable();
-          gameStartRequest_.add(index, builderForValue.build());
+      public Builder addJoinerReadyRequest(
+          int index, ClientServer.JoinerReadyRequest.Builder builderForValue) {
+        if (joinerReadyRequestBuilder_ == null) {
+          ensureJoinerReadyRequestIsMutable();
+          joinerReadyRequest_.add(index, builderForValue.build());
           onChanged();
         } else {
-          gameStartRequestBuilder_.addMessage(index, builderForValue.build());
+          joinerReadyRequestBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder addAllGameStartRequest(
-          java.lang.Iterable<? extends ClientServer.GameStartRequest> values) {
-        if (gameStartRequestBuilder_ == null) {
-          ensureGameStartRequestIsMutable();
+      public Builder addAllJoinerReadyRequest(
+          java.lang.Iterable<? extends ClientServer.JoinerReadyRequest> values) {
+        if (joinerReadyRequestBuilder_ == null) {
+          ensureJoinerReadyRequestIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, gameStartRequest_);
+              values, joinerReadyRequest_);
           onChanged();
         } else {
-          gameStartRequestBuilder_.addAllMessages(values);
+          joinerReadyRequestBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder clearGameStartRequest() {
-        if (gameStartRequestBuilder_ == null) {
-          gameStartRequest_ = java.util.Collections.emptyList();
+      public Builder clearJoinerReadyRequest() {
+        if (joinerReadyRequestBuilder_ == null) {
+          joinerReadyRequest_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
-          gameStartRequestBuilder_.clear();
+          joinerReadyRequestBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public Builder removeGameStartRequest(int index) {
-        if (gameStartRequestBuilder_ == null) {
-          ensureGameStartRequestIsMutable();
-          gameStartRequest_.remove(index);
+      public Builder removeJoinerReadyRequest(int index) {
+        if (joinerReadyRequestBuilder_ == null) {
+          ensureJoinerReadyRequestIsMutable();
+          joinerReadyRequest_.remove(index);
           onChanged();
         } else {
-          gameStartRequestBuilder_.remove(index);
+          joinerReadyRequestBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public ClientServer.GameStartRequest.Builder getGameStartRequestBuilder(
+      public ClientServer.JoinerReadyRequest.Builder getJoinerReadyRequestBuilder(
           int index) {
-        return getGameStartRequestFieldBuilder().getBuilder(index);
+        return getJoinerReadyRequestFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public ClientServer.GameStartRequestOrBuilder getGameStartRequestOrBuilder(
+      public ClientServer.JoinerReadyRequestOrBuilder getJoinerReadyRequestOrBuilder(
           int index) {
-        if (gameStartRequestBuilder_ == null) {
-          return gameStartRequest_.get(index);  } else {
-          return gameStartRequestBuilder_.getMessageOrBuilder(index);
+        if (joinerReadyRequestBuilder_ == null) {
+          return joinerReadyRequest_.get(index);  } else {
+          return joinerReadyRequestBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public java.util.List<? extends ClientServer.GameStartRequestOrBuilder> 
-           getGameStartRequestOrBuilderList() {
-        if (gameStartRequestBuilder_ != null) {
-          return gameStartRequestBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends ClientServer.JoinerReadyRequestOrBuilder> 
+           getJoinerReadyRequestOrBuilderList() {
+        if (joinerReadyRequestBuilder_ != null) {
+          return joinerReadyRequestBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(gameStartRequest_);
+          return java.util.Collections.unmodifiableList(joinerReadyRequest_);
         }
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public ClientServer.GameStartRequest.Builder addGameStartRequestBuilder() {
-        return getGameStartRequestFieldBuilder().addBuilder(
-            ClientServer.GameStartRequest.getDefaultInstance());
+      public ClientServer.JoinerReadyRequest.Builder addJoinerReadyRequestBuilder() {
+        return getJoinerReadyRequestFieldBuilder().addBuilder(
+            ClientServer.JoinerReadyRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public ClientServer.GameStartRequest.Builder addGameStartRequestBuilder(
+      public ClientServer.JoinerReadyRequest.Builder addJoinerReadyRequestBuilder(
           int index) {
-        return getGameStartRequestFieldBuilder().addBuilder(
-            index, ClientServer.GameStartRequest.getDefaultInstance());
+        return getJoinerReadyRequestFieldBuilder().addBuilder(
+            index, ClientServer.JoinerReadyRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .GameStartRequest gameStartRequest = 4;</code>
+       * <code>repeated .JoinerReadyRequest joinerReadyRequest = 4;</code>
        */
-      public java.util.List<ClientServer.GameStartRequest.Builder> 
-           getGameStartRequestBuilderList() {
-        return getGameStartRequestFieldBuilder().getBuilderList();
+      public java.util.List<ClientServer.JoinerReadyRequest.Builder> 
+           getJoinerReadyRequestBuilderList() {
+        return getJoinerReadyRequestFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          ClientServer.GameStartRequest, ClientServer.GameStartRequest.Builder, ClientServer.GameStartRequestOrBuilder> 
-          getGameStartRequestFieldBuilder() {
-        if (gameStartRequestBuilder_ == null) {
-          gameStartRequestBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              ClientServer.GameStartRequest, ClientServer.GameStartRequest.Builder, ClientServer.GameStartRequestOrBuilder>(
-                  gameStartRequest_,
+          ClientServer.JoinerReadyRequest, ClientServer.JoinerReadyRequest.Builder, ClientServer.JoinerReadyRequestOrBuilder> 
+          getJoinerReadyRequestFieldBuilder() {
+        if (joinerReadyRequestBuilder_ == null) {
+          joinerReadyRequestBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ClientServer.JoinerReadyRequest, ClientServer.JoinerReadyRequest.Builder, ClientServer.JoinerReadyRequestOrBuilder>(
+                  joinerReadyRequest_,
                   ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
-          gameStartRequest_ = null;
+          joinerReadyRequest_ = null;
         }
-        return gameStartRequestBuilder_;
+        return joinerReadyRequestBuilder_;
+      }
+
+      private java.util.List<ClientServer.OwnerStartGameRequest> ownerStartGameRequest_ =
+        java.util.Collections.emptyList();
+      private void ensureOwnerStartGameRequestIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          ownerStartGameRequest_ = new java.util.ArrayList<ClientServer.OwnerStartGameRequest>(ownerStartGameRequest_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ClientServer.OwnerStartGameRequest, ClientServer.OwnerStartGameRequest.Builder, ClientServer.OwnerStartGameRequestOrBuilder> ownerStartGameRequestBuilder_;
+
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public java.util.List<ClientServer.OwnerStartGameRequest> getOwnerStartGameRequestList() {
+        if (ownerStartGameRequestBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ownerStartGameRequest_);
+        } else {
+          return ownerStartGameRequestBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public int getOwnerStartGameRequestCount() {
+        if (ownerStartGameRequestBuilder_ == null) {
+          return ownerStartGameRequest_.size();
+        } else {
+          return ownerStartGameRequestBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public ClientServer.OwnerStartGameRequest getOwnerStartGameRequest(int index) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          return ownerStartGameRequest_.get(index);
+        } else {
+          return ownerStartGameRequestBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder setOwnerStartGameRequest(
+          int index, ClientServer.OwnerStartGameRequest value) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOwnerStartGameRequestIsMutable();
+          ownerStartGameRequest_.set(index, value);
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder setOwnerStartGameRequest(
+          int index, ClientServer.OwnerStartGameRequest.Builder builderForValue) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          ensureOwnerStartGameRequestIsMutable();
+          ownerStartGameRequest_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder addOwnerStartGameRequest(ClientServer.OwnerStartGameRequest value) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOwnerStartGameRequestIsMutable();
+          ownerStartGameRequest_.add(value);
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder addOwnerStartGameRequest(
+          int index, ClientServer.OwnerStartGameRequest value) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOwnerStartGameRequestIsMutable();
+          ownerStartGameRequest_.add(index, value);
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder addOwnerStartGameRequest(
+          ClientServer.OwnerStartGameRequest.Builder builderForValue) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          ensureOwnerStartGameRequestIsMutable();
+          ownerStartGameRequest_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder addOwnerStartGameRequest(
+          int index, ClientServer.OwnerStartGameRequest.Builder builderForValue) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          ensureOwnerStartGameRequestIsMutable();
+          ownerStartGameRequest_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder addAllOwnerStartGameRequest(
+          java.lang.Iterable<? extends ClientServer.OwnerStartGameRequest> values) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          ensureOwnerStartGameRequestIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ownerStartGameRequest_);
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder clearOwnerStartGameRequest() {
+        if (ownerStartGameRequestBuilder_ == null) {
+          ownerStartGameRequest_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public Builder removeOwnerStartGameRequest(int index) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          ensureOwnerStartGameRequestIsMutable();
+          ownerStartGameRequest_.remove(index);
+          onChanged();
+        } else {
+          ownerStartGameRequestBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public ClientServer.OwnerStartGameRequest.Builder getOwnerStartGameRequestBuilder(
+          int index) {
+        return getOwnerStartGameRequestFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public ClientServer.OwnerStartGameRequestOrBuilder getOwnerStartGameRequestOrBuilder(
+          int index) {
+        if (ownerStartGameRequestBuilder_ == null) {
+          return ownerStartGameRequest_.get(index);  } else {
+          return ownerStartGameRequestBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public java.util.List<? extends ClientServer.OwnerStartGameRequestOrBuilder> 
+           getOwnerStartGameRequestOrBuilderList() {
+        if (ownerStartGameRequestBuilder_ != null) {
+          return ownerStartGameRequestBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ownerStartGameRequest_);
+        }
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public ClientServer.OwnerStartGameRequest.Builder addOwnerStartGameRequestBuilder() {
+        return getOwnerStartGameRequestFieldBuilder().addBuilder(
+            ClientServer.OwnerStartGameRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public ClientServer.OwnerStartGameRequest.Builder addOwnerStartGameRequestBuilder(
+          int index) {
+        return getOwnerStartGameRequestFieldBuilder().addBuilder(
+            index, ClientServer.OwnerStartGameRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .OwnerStartGameRequest ownerStartGameRequest = 5;</code>
+       */
+      public java.util.List<ClientServer.OwnerStartGameRequest.Builder> 
+           getOwnerStartGameRequestBuilderList() {
+        return getOwnerStartGameRequestFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ClientServer.OwnerStartGameRequest, ClientServer.OwnerStartGameRequest.Builder, ClientServer.OwnerStartGameRequestOrBuilder> 
+          getOwnerStartGameRequestFieldBuilder() {
+        if (ownerStartGameRequestBuilder_ == null) {
+          ownerStartGameRequestBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ClientServer.OwnerStartGameRequest, ClientServer.OwnerStartGameRequest.Builder, ClientServer.OwnerStartGameRequestOrBuilder>(
+                  ownerStartGameRequest_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          ownerStartGameRequest_ = null;
+        }
+        return ownerStartGameRequestBuilder_;
+      }
+
+      private java.util.List<ClientServer.RoomStatusRequest> roomStatusRequest_ =
+        java.util.Collections.emptyList();
+      private void ensureRoomStatusRequestIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          roomStatusRequest_ = new java.util.ArrayList<ClientServer.RoomStatusRequest>(roomStatusRequest_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ClientServer.RoomStatusRequest, ClientServer.RoomStatusRequest.Builder, ClientServer.RoomStatusRequestOrBuilder> roomStatusRequestBuilder_;
+
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public java.util.List<ClientServer.RoomStatusRequest> getRoomStatusRequestList() {
+        if (roomStatusRequestBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(roomStatusRequest_);
+        } else {
+          return roomStatusRequestBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public int getRoomStatusRequestCount() {
+        if (roomStatusRequestBuilder_ == null) {
+          return roomStatusRequest_.size();
+        } else {
+          return roomStatusRequestBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public ClientServer.RoomStatusRequest getRoomStatusRequest(int index) {
+        if (roomStatusRequestBuilder_ == null) {
+          return roomStatusRequest_.get(index);
+        } else {
+          return roomStatusRequestBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder setRoomStatusRequest(
+          int index, ClientServer.RoomStatusRequest value) {
+        if (roomStatusRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomStatusRequestIsMutable();
+          roomStatusRequest_.set(index, value);
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder setRoomStatusRequest(
+          int index, ClientServer.RoomStatusRequest.Builder builderForValue) {
+        if (roomStatusRequestBuilder_ == null) {
+          ensureRoomStatusRequestIsMutable();
+          roomStatusRequest_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder addRoomStatusRequest(ClientServer.RoomStatusRequest value) {
+        if (roomStatusRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomStatusRequestIsMutable();
+          roomStatusRequest_.add(value);
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder addRoomStatusRequest(
+          int index, ClientServer.RoomStatusRequest value) {
+        if (roomStatusRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRoomStatusRequestIsMutable();
+          roomStatusRequest_.add(index, value);
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder addRoomStatusRequest(
+          ClientServer.RoomStatusRequest.Builder builderForValue) {
+        if (roomStatusRequestBuilder_ == null) {
+          ensureRoomStatusRequestIsMutable();
+          roomStatusRequest_.add(builderForValue.build());
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder addRoomStatusRequest(
+          int index, ClientServer.RoomStatusRequest.Builder builderForValue) {
+        if (roomStatusRequestBuilder_ == null) {
+          ensureRoomStatusRequestIsMutable();
+          roomStatusRequest_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder addAllRoomStatusRequest(
+          java.lang.Iterable<? extends ClientServer.RoomStatusRequest> values) {
+        if (roomStatusRequestBuilder_ == null) {
+          ensureRoomStatusRequestIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, roomStatusRequest_);
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder clearRoomStatusRequest() {
+        if (roomStatusRequestBuilder_ == null) {
+          roomStatusRequest_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public Builder removeRoomStatusRequest(int index) {
+        if (roomStatusRequestBuilder_ == null) {
+          ensureRoomStatusRequestIsMutable();
+          roomStatusRequest_.remove(index);
+          onChanged();
+        } else {
+          roomStatusRequestBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public ClientServer.RoomStatusRequest.Builder getRoomStatusRequestBuilder(
+          int index) {
+        return getRoomStatusRequestFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public ClientServer.RoomStatusRequestOrBuilder getRoomStatusRequestOrBuilder(
+          int index) {
+        if (roomStatusRequestBuilder_ == null) {
+          return roomStatusRequest_.get(index);  } else {
+          return roomStatusRequestBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public java.util.List<? extends ClientServer.RoomStatusRequestOrBuilder> 
+           getRoomStatusRequestOrBuilderList() {
+        if (roomStatusRequestBuilder_ != null) {
+          return roomStatusRequestBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(roomStatusRequest_);
+        }
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public ClientServer.RoomStatusRequest.Builder addRoomStatusRequestBuilder() {
+        return getRoomStatusRequestFieldBuilder().addBuilder(
+            ClientServer.RoomStatusRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public ClientServer.RoomStatusRequest.Builder addRoomStatusRequestBuilder(
+          int index) {
+        return getRoomStatusRequestFieldBuilder().addBuilder(
+            index, ClientServer.RoomStatusRequest.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .RoomStatusRequest roomStatusRequest = 6;</code>
+       */
+      public java.util.List<ClientServer.RoomStatusRequest.Builder> 
+           getRoomStatusRequestBuilderList() {
+        return getRoomStatusRequestFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ClientServer.RoomStatusRequest, ClientServer.RoomStatusRequest.Builder, ClientServer.RoomStatusRequestOrBuilder> 
+          getRoomStatusRequestFieldBuilder() {
+        if (roomStatusRequestBuilder_ == null) {
+          roomStatusRequestBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ClientServer.RoomStatusRequest, ClientServer.RoomStatusRequest.Builder, ClientServer.RoomStatusRequestOrBuilder>(
+                  roomStatusRequest_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          roomStatusRequest_ = null;
+        }
+        return roomStatusRequestBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3870,15 +4618,21 @@ public final class ClientServer {
 
   }
 
-  public interface GameStartRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:GameStartRequest)
+  public interface JoinerReadyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:JoinerReadyRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 player_name = 1;</code>
+     * <code>string player_name = 1;</code>
      * @return The playerName.
      */
-    int getPlayerName();
+    java.lang.String getPlayerName();
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The bytes for playerName.
+     */
+    com.google.protobuf.ByteString
+        getPlayerNameBytes();
 
     /**
      * <code>string room_code = 2;</code>
@@ -3894,21 +4648,22 @@ public final class ClientServer {
   }
   /**
    * <pre>
-   * send to start the game, everyone in room should send
+   * send to get ready for the game, joiners in room should send
    * </pre>
    *
-   * Protobuf type {@code GameStartRequest}
+   * Protobuf type {@code JoinerReadyRequest}
    */
-  public static final class GameStartRequest extends
+  public static final class JoinerReadyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:GameStartRequest)
-      GameStartRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:JoinerReadyRequest)
+      JoinerReadyRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GameStartRequest.newBuilder() to construct.
-    private GameStartRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use JoinerReadyRequest.newBuilder() to construct.
+    private JoinerReadyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GameStartRequest() {
+    private JoinerReadyRequest() {
+      playerName_ = "";
       roomCode_ = "";
     }
 
@@ -3916,7 +4671,7 @@ public final class ClientServer {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GameStartRequest();
+      return new JoinerReadyRequest();
     }
 
     @java.lang.Override
@@ -3926,26 +4681,54 @@ public final class ClientServer {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ClientServer.internal_static_GameStartRequest_descriptor;
+      return ClientServer.internal_static_JoinerReadyRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ClientServer.internal_static_GameStartRequest_fieldAccessorTable
+      return ClientServer.internal_static_JoinerReadyRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ClientServer.GameStartRequest.class, ClientServer.GameStartRequest.Builder.class);
+              ClientServer.JoinerReadyRequest.class, ClientServer.JoinerReadyRequest.Builder.class);
     }
 
     public static final int PLAYER_NAME_FIELD_NUMBER = 1;
-    private int playerName_ = 0;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object playerName_ = "";
     /**
-     * <code>int32 player_name = 1;</code>
+     * <code>string player_name = 1;</code>
      * @return The playerName.
      */
     @java.lang.Override
-    public int getPlayerName() {
-      return playerName_;
+    public java.lang.String getPlayerName() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        playerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The bytes for playerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlayerNameBytes() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        playerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ROOM_CODE_FIELD_NUMBER = 2;
@@ -4001,8 +4784,8 @@ public final class ClientServer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (playerName_ != 0) {
-        output.writeInt32(1, playerName_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, playerName_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roomCode_);
@@ -4016,9 +4799,8 @@ public final class ClientServer {
       if (size != -1) return size;
 
       size = 0;
-      if (playerName_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, playerName_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, playerName_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roomCode_);
@@ -4033,13 +4815,13 @@ public final class ClientServer {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ClientServer.GameStartRequest)) {
+      if (!(obj instanceof ClientServer.JoinerReadyRequest)) {
         return super.equals(obj);
       }
-      ClientServer.GameStartRequest other = (ClientServer.GameStartRequest) obj;
+      ClientServer.JoinerReadyRequest other = (ClientServer.JoinerReadyRequest) obj;
 
-      if (getPlayerName()
-          != other.getPlayerName()) return false;
+      if (!getPlayerName()
+          .equals(other.getPlayerName())) return false;
       if (!getRoomCode()
           .equals(other.getRoomCode())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -4054,7 +4836,7 @@ public final class ClientServer {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PLAYER_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getPlayerName();
+      hash = (53 * hash) + getPlayerName().hashCode();
       hash = (37 * hash) + ROOM_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getRoomCode().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -4062,69 +4844,69 @@ public final class ClientServer {
       return hash;
     }
 
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientServer.GameStartRequest parseFrom(byte[] data)
+    public static ClientServer.JoinerReadyRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ClientServer.GameStartRequest parseFrom(java.io.InputStream input)
+    public static ClientServer.JoinerReadyRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ClientServer.GameStartRequest parseDelimitedFrom(java.io.InputStream input)
+    public static ClientServer.JoinerReadyRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ClientServer.GameStartRequest parseDelimitedFrom(
+    public static ClientServer.JoinerReadyRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ClientServer.GameStartRequest parseFrom(
+    public static ClientServer.JoinerReadyRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4137,7 +4919,7 @@ public final class ClientServer {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ClientServer.GameStartRequest prototype) {
+    public static Builder newBuilder(ClientServer.JoinerReadyRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4154,29 +4936,29 @@ public final class ClientServer {
     }
     /**
      * <pre>
-     * send to start the game, everyone in room should send
+     * send to get ready for the game, joiners in room should send
      * </pre>
      *
-     * Protobuf type {@code GameStartRequest}
+     * Protobuf type {@code JoinerReadyRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:GameStartRequest)
-        ClientServer.GameStartRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:JoinerReadyRequest)
+        ClientServer.JoinerReadyRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ClientServer.internal_static_GameStartRequest_descriptor;
+        return ClientServer.internal_static_JoinerReadyRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ClientServer.internal_static_GameStartRequest_fieldAccessorTable
+        return ClientServer.internal_static_JoinerReadyRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ClientServer.GameStartRequest.class, ClientServer.GameStartRequest.Builder.class);
+                ClientServer.JoinerReadyRequest.class, ClientServer.JoinerReadyRequest.Builder.class);
       }
 
-      // Construct using ClientServer.GameStartRequest.newBuilder()
+      // Construct using ClientServer.JoinerReadyRequest.newBuilder()
       private Builder() {
 
       }
@@ -4190,7 +4972,7 @@ public final class ClientServer {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        playerName_ = 0;
+        playerName_ = "";
         roomCode_ = "";
         return this;
       }
@@ -4198,17 +4980,17 @@ public final class ClientServer {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ClientServer.internal_static_GameStartRequest_descriptor;
+        return ClientServer.internal_static_JoinerReadyRequest_descriptor;
       }
 
       @java.lang.Override
-      public ClientServer.GameStartRequest getDefaultInstanceForType() {
-        return ClientServer.GameStartRequest.getDefaultInstance();
+      public ClientServer.JoinerReadyRequest getDefaultInstanceForType() {
+        return ClientServer.JoinerReadyRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ClientServer.GameStartRequest build() {
-        ClientServer.GameStartRequest result = buildPartial();
+      public ClientServer.JoinerReadyRequest build() {
+        ClientServer.JoinerReadyRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4216,14 +4998,14 @@ public final class ClientServer {
       }
 
       @java.lang.Override
-      public ClientServer.GameStartRequest buildPartial() {
-        ClientServer.GameStartRequest result = new ClientServer.GameStartRequest(this);
+      public ClientServer.JoinerReadyRequest buildPartial() {
+        ClientServer.JoinerReadyRequest result = new ClientServer.JoinerReadyRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(ClientServer.GameStartRequest result) {
+      private void buildPartial0(ClientServer.JoinerReadyRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.playerName_ = playerName_;
@@ -4267,18 +5049,20 @@ public final class ClientServer {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ClientServer.GameStartRequest) {
-          return mergeFrom((ClientServer.GameStartRequest)other);
+        if (other instanceof ClientServer.JoinerReadyRequest) {
+          return mergeFrom((ClientServer.JoinerReadyRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ClientServer.GameStartRequest other) {
-        if (other == ClientServer.GameStartRequest.getDefaultInstance()) return this;
-        if (other.getPlayerName() != 0) {
-          setPlayerName(other.getPlayerName());
+      public Builder mergeFrom(ClientServer.JoinerReadyRequest other) {
+        if (other == ClientServer.JoinerReadyRequest.getDefaultInstance()) return this;
+        if (!other.getPlayerName().isEmpty()) {
+          playerName_ = other.playerName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
         }
         if (!other.getRoomCode().isEmpty()) {
           roomCode_ = other.roomCode_;
@@ -4311,11 +5095,11 @@ public final class ClientServer {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                playerName_ = input.readInt32();
+              case 10: {
+                playerName_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 8
+              } // case 10
               case 18: {
                 roomCode_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
@@ -4338,34 +5122,74 @@ public final class ClientServer {
       }
       private int bitField0_;
 
-      private int playerName_ ;
+      private java.lang.Object playerName_ = "";
       /**
-       * <code>int32 player_name = 1;</code>
+       * <code>string player_name = 1;</code>
        * @return The playerName.
        */
-      @java.lang.Override
-      public int getPlayerName() {
-        return playerName_;
+      public java.lang.String getPlayerName() {
+        java.lang.Object ref = playerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          playerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int32 player_name = 1;</code>
+       * <code>string player_name = 1;</code>
+       * @return The bytes for playerName.
+       */
+      public com.google.protobuf.ByteString
+          getPlayerNameBytes() {
+        java.lang.Object ref = playerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          playerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string player_name = 1;</code>
        * @param value The playerName to set.
        * @return This builder for chaining.
        */
-      public Builder setPlayerName(int value) {
-        
+      public Builder setPlayerName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         playerName_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 player_name = 1;</code>
+       * <code>string player_name = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearPlayerName() {
+        playerName_ = getDefaultInstance().getPlayerName();
         bitField0_ = (bitField0_ & ~0x00000001);
-        playerName_ = 0;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @param value The bytes for playerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlayerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        playerName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4454,23 +5278,23 @@ public final class ClientServer {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:GameStartRequest)
+      // @@protoc_insertion_point(builder_scope:JoinerReadyRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:GameStartRequest)
-    private static final ClientServer.GameStartRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:JoinerReadyRequest)
+    private static final ClientServer.JoinerReadyRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ClientServer.GameStartRequest();
+      DEFAULT_INSTANCE = new ClientServer.JoinerReadyRequest();
     }
 
-    public static ClientServer.GameStartRequest getDefaultInstance() {
+    public static ClientServer.JoinerReadyRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GameStartRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GameStartRequest>() {
+    private static final com.google.protobuf.Parser<JoinerReadyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<JoinerReadyRequest>() {
       @java.lang.Override
-      public GameStartRequest parsePartialFrom(
+      public JoinerReadyRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4489,17 +5313,1431 @@ public final class ClientServer {
       }
     };
 
-    public static com.google.protobuf.Parser<GameStartRequest> parser() {
+    public static com.google.protobuf.Parser<JoinerReadyRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GameStartRequest> getParserForType() {
+    public com.google.protobuf.Parser<JoinerReadyRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ClientServer.GameStartRequest getDefaultInstanceForType() {
+    public ClientServer.JoinerReadyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OwnerStartGameRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:OwnerStartGameRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The playerName.
+     */
+    java.lang.String getPlayerName();
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The bytes for playerName.
+     */
+    com.google.protobuf.ByteString
+        getPlayerNameBytes();
+
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The roomCode.
+     */
+    java.lang.String getRoomCode();
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The bytes for roomCode.
+     */
+    com.google.protobuf.ByteString
+        getRoomCodeBytes();
+  }
+  /**
+   * <pre>
+   * send to start the game, owners can send only others all ready
+   * </pre>
+   *
+   * Protobuf type {@code OwnerStartGameRequest}
+   */
+  public static final class OwnerStartGameRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:OwnerStartGameRequest)
+      OwnerStartGameRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OwnerStartGameRequest.newBuilder() to construct.
+    private OwnerStartGameRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OwnerStartGameRequest() {
+      playerName_ = "";
+      roomCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OwnerStartGameRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ClientServer.internal_static_OwnerStartGameRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ClientServer.internal_static_OwnerStartGameRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ClientServer.OwnerStartGameRequest.class, ClientServer.OwnerStartGameRequest.Builder.class);
+    }
+
+    public static final int PLAYER_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object playerName_ = "";
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The playerName.
+     */
+    @java.lang.Override
+    public java.lang.String getPlayerName() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        playerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The bytes for playerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlayerNameBytes() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        playerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROOM_CODE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object roomCode_ = "";
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The roomCode.
+     */
+    @java.lang.Override
+    public java.lang.String getRoomCode() {
+      java.lang.Object ref = roomCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roomCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The bytes for roomCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoomCodeBytes() {
+      java.lang.Object ref = roomCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roomCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, playerName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roomCode_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, playerName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roomCode_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ClientServer.OwnerStartGameRequest)) {
+        return super.equals(obj);
+      }
+      ClientServer.OwnerStartGameRequest other = (ClientServer.OwnerStartGameRequest) obj;
+
+      if (!getPlayerName()
+          .equals(other.getPlayerName())) return false;
+      if (!getRoomCode()
+          .equals(other.getRoomCode())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PLAYER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getPlayerName().hashCode();
+      hash = (37 * hash) + ROOM_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRoomCode().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ClientServer.OwnerStartGameRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ClientServer.OwnerStartGameRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ClientServer.OwnerStartGameRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ClientServer.OwnerStartGameRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * send to start the game, owners can send only others all ready
+     * </pre>
+     *
+     * Protobuf type {@code OwnerStartGameRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:OwnerStartGameRequest)
+        ClientServer.OwnerStartGameRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ClientServer.internal_static_OwnerStartGameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ClientServer.internal_static_OwnerStartGameRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ClientServer.OwnerStartGameRequest.class, ClientServer.OwnerStartGameRequest.Builder.class);
+      }
+
+      // Construct using ClientServer.OwnerStartGameRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        playerName_ = "";
+        roomCode_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ClientServer.internal_static_OwnerStartGameRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ClientServer.OwnerStartGameRequest getDefaultInstanceForType() {
+        return ClientServer.OwnerStartGameRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ClientServer.OwnerStartGameRequest build() {
+        ClientServer.OwnerStartGameRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ClientServer.OwnerStartGameRequest buildPartial() {
+        ClientServer.OwnerStartGameRequest result = new ClientServer.OwnerStartGameRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ClientServer.OwnerStartGameRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.playerName_ = playerName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.roomCode_ = roomCode_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ClientServer.OwnerStartGameRequest) {
+          return mergeFrom((ClientServer.OwnerStartGameRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ClientServer.OwnerStartGameRequest other) {
+        if (other == ClientServer.OwnerStartGameRequest.getDefaultInstance()) return this;
+        if (!other.getPlayerName().isEmpty()) {
+          playerName_ = other.playerName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRoomCode().isEmpty()) {
+          roomCode_ = other.roomCode_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                playerName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                roomCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object playerName_ = "";
+      /**
+       * <code>string player_name = 1;</code>
+       * @return The playerName.
+       */
+      public java.lang.String getPlayerName() {
+        java.lang.Object ref = playerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          playerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @return The bytes for playerName.
+       */
+      public com.google.protobuf.ByteString
+          getPlayerNameBytes() {
+        java.lang.Object ref = playerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          playerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @param value The playerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlayerName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        playerName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlayerName() {
+        playerName_ = getDefaultInstance().getPlayerName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @param value The bytes for playerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlayerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        playerName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object roomCode_ = "";
+      /**
+       * <code>string room_code = 2;</code>
+       * @return The roomCode.
+       */
+      public java.lang.String getRoomCode() {
+        java.lang.Object ref = roomCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roomCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @return The bytes for roomCode.
+       */
+      public com.google.protobuf.ByteString
+          getRoomCodeBytes() {
+        java.lang.Object ref = roomCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roomCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @param value The roomCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        roomCode_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoomCode() {
+        roomCode_ = getDefaultInstance().getRoomCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @param value The bytes for roomCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        roomCode_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:OwnerStartGameRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:OwnerStartGameRequest)
+    private static final ClientServer.OwnerStartGameRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ClientServer.OwnerStartGameRequest();
+    }
+
+    public static ClientServer.OwnerStartGameRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OwnerStartGameRequest>
+        PARSER = new com.google.protobuf.AbstractParser<OwnerStartGameRequest>() {
+      @java.lang.Override
+      public OwnerStartGameRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<OwnerStartGameRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OwnerStartGameRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ClientServer.OwnerStartGameRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RoomStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:RoomStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The playerName.
+     */
+    java.lang.String getPlayerName();
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The bytes for playerName.
+     */
+    com.google.protobuf.ByteString
+        getPlayerNameBytes();
+
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The roomCode.
+     */
+    java.lang.String getRoomCode();
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The bytes for roomCode.
+     */
+    com.google.protobuf.ByteString
+        getRoomCodeBytes();
+  }
+  /**
+   * Protobuf type {@code RoomStatusRequest}
+   */
+  public static final class RoomStatusRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:RoomStatusRequest)
+      RoomStatusRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RoomStatusRequest.newBuilder() to construct.
+    private RoomStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RoomStatusRequest() {
+      playerName_ = "";
+      roomCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoomStatusRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ClientServer.internal_static_RoomStatusRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ClientServer.internal_static_RoomStatusRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ClientServer.RoomStatusRequest.class, ClientServer.RoomStatusRequest.Builder.class);
+    }
+
+    public static final int PLAYER_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object playerName_ = "";
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The playerName.
+     */
+    @java.lang.Override
+    public java.lang.String getPlayerName() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        playerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string player_name = 1;</code>
+     * @return The bytes for playerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlayerNameBytes() {
+      java.lang.Object ref = playerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        playerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROOM_CODE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object roomCode_ = "";
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The roomCode.
+     */
+    @java.lang.Override
+    public java.lang.String getRoomCode() {
+      java.lang.Object ref = roomCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roomCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string room_code = 2;</code>
+     * @return The bytes for roomCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoomCodeBytes() {
+      java.lang.Object ref = roomCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roomCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, playerName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roomCode_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(playerName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, playerName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roomCode_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roomCode_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ClientServer.RoomStatusRequest)) {
+        return super.equals(obj);
+      }
+      ClientServer.RoomStatusRequest other = (ClientServer.RoomStatusRequest) obj;
+
+      if (!getPlayerName()
+          .equals(other.getPlayerName())) return false;
+      if (!getRoomCode()
+          .equals(other.getRoomCode())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PLAYER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getPlayerName().hashCode();
+      hash = (37 * hash) + ROOM_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getRoomCode().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ClientServer.RoomStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ClientServer.RoomStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ClientServer.RoomStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ClientServer.RoomStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ClientServer.RoomStatusRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code RoomStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:RoomStatusRequest)
+        ClientServer.RoomStatusRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ClientServer.internal_static_RoomStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ClientServer.internal_static_RoomStatusRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ClientServer.RoomStatusRequest.class, ClientServer.RoomStatusRequest.Builder.class);
+      }
+
+      // Construct using ClientServer.RoomStatusRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        playerName_ = "";
+        roomCode_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ClientServer.internal_static_RoomStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ClientServer.RoomStatusRequest getDefaultInstanceForType() {
+        return ClientServer.RoomStatusRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ClientServer.RoomStatusRequest build() {
+        ClientServer.RoomStatusRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ClientServer.RoomStatusRequest buildPartial() {
+        ClientServer.RoomStatusRequest result = new ClientServer.RoomStatusRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ClientServer.RoomStatusRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.playerName_ = playerName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.roomCode_ = roomCode_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ClientServer.RoomStatusRequest) {
+          return mergeFrom((ClientServer.RoomStatusRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ClientServer.RoomStatusRequest other) {
+        if (other == ClientServer.RoomStatusRequest.getDefaultInstance()) return this;
+        if (!other.getPlayerName().isEmpty()) {
+          playerName_ = other.playerName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRoomCode().isEmpty()) {
+          roomCode_ = other.roomCode_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                playerName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                roomCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object playerName_ = "";
+      /**
+       * <code>string player_name = 1;</code>
+       * @return The playerName.
+       */
+      public java.lang.String getPlayerName() {
+        java.lang.Object ref = playerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          playerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @return The bytes for playerName.
+       */
+      public com.google.protobuf.ByteString
+          getPlayerNameBytes() {
+        java.lang.Object ref = playerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          playerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @param value The playerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlayerName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        playerName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlayerName() {
+        playerName_ = getDefaultInstance().getPlayerName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string player_name = 1;</code>
+       * @param value The bytes for playerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlayerNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        playerName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object roomCode_ = "";
+      /**
+       * <code>string room_code = 2;</code>
+       * @return The roomCode.
+       */
+      public java.lang.String getRoomCode() {
+        java.lang.Object ref = roomCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roomCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @return The bytes for roomCode.
+       */
+      public com.google.protobuf.ByteString
+          getRoomCodeBytes() {
+        java.lang.Object ref = roomCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roomCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @param value The roomCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        roomCode_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoomCode() {
+        roomCode_ = getDefaultInstance().getRoomCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string room_code = 2;</code>
+       * @param value The bytes for roomCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoomCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        roomCode_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:RoomStatusRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:RoomStatusRequest)
+    private static final ClientServer.RoomStatusRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ClientServer.RoomStatusRequest();
+    }
+
+    public static ClientServer.RoomStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RoomStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RoomStatusRequest>() {
+      @java.lang.Override
+      public RoomStatusRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RoomStatusRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RoomStatusRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ClientServer.RoomStatusRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4526,10 +6764,20 @@ public final class ClientServer {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_RoomJoinRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_GameStartRequest_descriptor;
+    internal_static_JoinerReadyRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_GameStartRequest_fieldAccessorTable;
+      internal_static_JoinerReadyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_OwnerStartGameRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_OwnerStartGameRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_RoomStatusRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_RoomStatusRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4539,18 +6787,24 @@ public final class ClientServer {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022ClientServer.proto\"\271\001\n\005CSmsg\022)\n\017idCrea" +
+      "\n\022ClientServer.proto\"\243\002\n\005CSmsg\022)\n\017idCrea" +
       "teRequest\030\001 \003(\0132\020.IdCreateRequest\022-\n\021roo" +
       "mCreateRequest\030\002 \003(\0132\022.RoomCreateRequest" +
       "\022)\n\017roomJoinRequest\030\003 \003(\0132\020.RoomJoinRequ" +
-      "est\022+\n\020gameStartRequest\030\004 \003(\0132\021.GameStar" +
-      "tRequest\"&\n\017IdCreateRequest\022\023\n\013player_na" +
-      "me\030\001 \001(\t\"(\n\021RoomCreateRequest\022\023\n\013player_" +
-      "name\030\001 \001(\t\"9\n\017RoomJoinRequest\022\023\n\013player_" +
-      "name\030\001 \001(\t\022\021\n\troom_code\030\002 \001(\t\":\n\020GameSta" +
-      "rtRequest\022\023\n\013player_name\030\001 \001(\005\022\021\n\troom_c" +
-      "ode\030\002 \001(\t*\"\n\006Status\022\013\n\007SUCCESS\020\000\022\013\n\007FAIL" +
-      "URE\020\001b\006proto3"
+      "est\022/\n\022joinerReadyRequest\030\004 \003(\0132\023.Joiner" +
+      "ReadyRequest\0225\n\025ownerStartGameRequest\030\005 " +
+      "\003(\0132\026.OwnerStartGameRequest\022-\n\021roomStatu" +
+      "sRequest\030\006 \003(\0132\022.RoomStatusRequest\"&\n\017Id" +
+      "CreateRequest\022\023\n\013player_name\030\001 \001(\t\"(\n\021Ro" +
+      "omCreateRequest\022\023\n\013player_name\030\001 \001(\t\"9\n\017" +
+      "RoomJoinRequest\022\023\n\013player_name\030\001 \001(\t\022\021\n\t" +
+      "room_code\030\002 \001(\t\"<\n\022JoinerReadyRequest\022\023\n" +
+      "\013player_name\030\001 \001(\t\022\021\n\troom_code\030\002 \001(\t\"?\n" +
+      "\025OwnerStartGameRequest\022\023\n\013player_name\030\001 " +
+      "\001(\t\022\021\n\troom_code\030\002 \001(\t\";\n\021RoomStatusRequ" +
+      "est\022\023\n\013player_name\030\001 \001(\t\022\021\n\troom_code\030\002 " +
+      "\001(\t*\"\n\006Status\022\013\n\007SUCCESS\020\000\022\013\n\007FAILURE\020\001b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4561,7 +6815,7 @@ public final class ClientServer {
     internal_static_CSmsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CSmsg_descriptor,
-        new java.lang.String[] { "IdCreateRequest", "RoomCreateRequest", "RoomJoinRequest", "GameStartRequest", });
+        new java.lang.String[] { "IdCreateRequest", "RoomCreateRequest", "RoomJoinRequest", "JoinerReadyRequest", "OwnerStartGameRequest", "RoomStatusRequest", });
     internal_static_IdCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_IdCreateRequest_fieldAccessorTable = new
@@ -4580,11 +6834,23 @@ public final class ClientServer {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RoomJoinRequest_descriptor,
         new java.lang.String[] { "PlayerName", "RoomCode", });
-    internal_static_GameStartRequest_descriptor =
+    internal_static_JoinerReadyRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_GameStartRequest_fieldAccessorTable = new
+    internal_static_JoinerReadyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_GameStartRequest_descriptor,
+        internal_static_JoinerReadyRequest_descriptor,
+        new java.lang.String[] { "PlayerName", "RoomCode", });
+    internal_static_OwnerStartGameRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_OwnerStartGameRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_OwnerStartGameRequest_descriptor,
+        new java.lang.String[] { "PlayerName", "RoomCode", });
+    internal_static_RoomStatusRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_RoomStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_RoomStatusRequest_descriptor,
         new java.lang.String[] { "PlayerName", "RoomCode", });
   }
 

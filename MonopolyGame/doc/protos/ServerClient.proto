@@ -5,9 +5,10 @@ message SCmsg {
     repeated IdCreateResponse idCreateResponse = 1;
     repeated RoomCreateResponse roomCreateResponse = 2;
     repeated RoomJoinResponse roomJoinResponse = 3;
-    repeated GameStartResponse gameStartResponse = 4;
-    repeated RoomStatusInform roomStatusInform = 5;
-    repeated GameStartInform gameStartInform = 6;
+    repeated JoinerReadyResponse joinerReadyResponse = 4;
+    repeated OwnerStartGameResponse ownerStartGameResponse = 5;
+    repeated RoomStatusResponse roomStatusResponse = 6;
+    repeated GameStartInform gameStartInform = 7;
 }
 
 // ************************Constants************************
@@ -31,21 +32,30 @@ message RoomCreateResponse {
     Status status = 1;
     // 6-digit numbers mixed with letters, 
     // empty str for failure
-    string room_code = 4;
+    string room_code = 2;
+    string room_owner_name = 3;
     // empty str for success
-    string fail_reason = 5;
+    string fail_reason = 4;
 }
 
 // response for RoomJoinRequest
 message RoomJoinResponse {
     // 0 for success, 1 for failure
     Status status= 1;
+    string room_owner_name = 2;
     // empty str for success
-    string fail_reason = 4;
+    string fail_reason = 3;
 }
 
 // response for GameStartRequest
-message GameStartResponse {
+message JoinerReadyResponse {
+    // 0 for success, 1 for failure
+    Status status = 1;
+    // empty str for success
+    string fail_reason = 2;
+}
+
+message OwnerStartGameResponse {
     // 0 for success, 1 for failure
     Status status = 1;
     // empty str for success
@@ -54,9 +64,8 @@ message GameStartResponse {
 
 // inform player the room status
 // both after people join and people ready to start
-message RoomStatusInform {
-    int32 player_num = 1;
-    string room_status = 3;
+message RoomStatusResponse {
+    string room_status = 1;
 }
 
 // Inform the start of game
