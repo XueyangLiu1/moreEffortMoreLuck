@@ -2,11 +2,12 @@ syntax = "proto3";
 
 // ************************Message Type************************
 message SCmsg {
-    repeated RoomCreateResponse roomCreateResponse = 1;
-    repeated RoomJoinResponse roomJoinResponse = 2;
-    repeated GameStartResponse gameStartResponse = 3;
-    repeated RoomStatusInform roomStatusInform = 4;
-    repeated GameStartInform gameStartInform = 5;
+    repeated IdCreateResponse idCreateResponse = 1;
+    repeated RoomCreateResponse roomCreateResponse = 2;
+    repeated RoomJoinResponse roomJoinResponse = 3;
+    repeated GameStartResponse gameStartResponse = 4;
+    repeated RoomStatusInform roomStatusInform = 5;
+    repeated GameStartInform gameStartInform = 6;
 }
 
 // ************************Constants************************
@@ -16,23 +17,29 @@ enum Status {
 }
 
 // ************************Pregame Preparation************************
+// response for IdCreateRequest
+message IdCreateResponse {
+    // 0 for success, 1 for failure
+    Status status = 1;
+    // empty str for success
+    string fail_reason = 2;
+} 
+
 // response for RoomCreateRequest
 message RoomCreateResponse {
     // 0 for success, 1 for failure
     Status status = 1;
     // 6-digit numbers mixed with letters, 
     // empty str for failure
-    string room_code = 2;
+    string room_code = 4;
+    // empty str for success
+    string fail_reason = 5;
 }
 
 // response for RoomJoinRequest
 message RoomJoinResponse {
     // 0 for success, 1 for failure
     Status status= 1;
-    // assign index if join success
-    // default -1
-    int32 player_index = 2;
-    string player_name = 3;
     // empty str for success
     string fail_reason = 4;
 }
@@ -49,7 +56,6 @@ message GameStartResponse {
 // both after people join and people ready to start
 message RoomStatusInform {
     int32 player_num = 1;
-    int32 room_capacity = 2;
     string room_status = 3;
 }
 

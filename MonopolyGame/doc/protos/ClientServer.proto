@@ -2,9 +2,10 @@ syntax = "proto3";
 
 // ************************Message Type************************
 message CSmsg {
-    repeated RoomCreateRequest roomCreateRequest = 1;
-    repeated RoomJoinRequest roomJoinRequest = 2;
-    repeated GameStartRequest gameStartRequest = 3;
+    repeated IdCreateRequest idCreateRequest = 1;
+    repeated RoomCreateRequest roomCreateRequest = 2;
+    repeated RoomJoinRequest roomJoinRequest = 3;
+    repeated GameStartRequest gameStartRequest = 4;
 }
 
 // ************************Constants************************
@@ -14,10 +15,14 @@ enum Status {
 }
 
 // ************************Pregame Preparation************************
+
+message IdCreateRequest {
+    string player_name = 1;
+}
+
 // ask server to create a room for a number of players
 message RoomCreateRequest {
     string player_name = 1;
-    int32 room_capacity = 2;
 }
 
 // send room code to join the room
@@ -28,14 +33,16 @@ message RoomJoinRequest {
 
 // send to start the game, everyone in room should send
 message GameStartRequest {
-    int32 player_index = 1;
-    // set personal goals
-    int32 joy_goal = 2;
-    int32 wealth_goal = 3;
-    int32 fame_goal = 4;
+    int32 player_name = 1;
+    string room_code = 2;
 }
 
 // // ************************Basic round************************
+    // set personal goals
+    // int32 joy_goal = 2;
+    // int32 wealth_goal = 3;
+    // int32 fame_goal = 4;
+
 // // ack the RoundStartInform
 // message RoundStartAck {
 //     int32 player_index = 1;
