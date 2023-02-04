@@ -15,6 +15,7 @@ public class PregameMessageHandler implements Runnable{
     private final Map<String, Room> codeRoomMap;
     private final ExecutorService threadPool;
     private boolean running;
+    private Room currentRoom;
 
     @Override
     public void run() {
@@ -44,13 +45,14 @@ public class PregameMessageHandler implements Runnable{
                 assert (playerNames.contains(playerName));
 
                 if (creatorRoomMap.get(playerName) == null) {
-                    String roomCode = RandomStringUtils.random(6, true, true);
+                    String roomCode = RandomStringUtils.random(6, true, true).toUpperCase();
                     Room room = new Room(playerName, serverClientCommunicator);
                     while (codeRoomMap.putIfAbsent(roomCode, room) != null) {
-                        roomCode = RandomStringUtils.random(6, true, true);
+                        roomCode = RandomStringUtils.random(6, true, true).toUpperCase();
                     }
                     room.setRoomCode(roomCode);
                     creatorRoomMap.put(playerName, room);
+                    currentRoom = room;
                     serverClientCommunicator.send(ServerClient.SCmsg.newBuilder().addRoomCreateResponse(
                             ServerClient.RoomCreateResponse.newBuilder()
                                     .setStatus(ServerClient.Status.SUCCESS)
@@ -83,6 +85,7 @@ public class PregameMessageHandler implements Runnable{
                                     .setRoomOwnerName(roomToJoin.getRoomOwnerName())).build());
                 } else {
                     roomToJoin.addPlayer(playerName, serverClientCommunicator);
+                    currentRoom = roomToJoin;
                     serverClientCommunicator.send(ServerClient.SCmsg.newBuilder().addRoomJoinResponse(
                             ServerClient.RoomJoinResponse.newBuilder()
                                     .setStatus(ServerClient.Status.SUCCESS)
@@ -90,9 +93,8 @@ public class PregameMessageHandler implements Runnable{
                 }
             } else if (msg.getJoinerReadyRequestCount() > 0) {
                 ClientServer.JoinerReadyRequest request = msg.getJoinerReadyRequest(0);
-                String roomCode = request.getRoomCode();
                 String playerName = request.getPlayerName();
-                Room room = codeRoomMap.get(roomCode);
+                Room room = currentRoom;
 
                 // ensured by client procedure
                 assert (room != null);
@@ -105,9 +107,8 @@ public class PregameMessageHandler implements Runnable{
                                 .setStatus(ServerClient.Status.SUCCESS)).build());
             } else if (msg.getOwnerStartGameRequestCount() > 0) {
                 ClientServer.OwnerStartGameRequest request = msg.getOwnerStartGameRequest(0);
-                String roomCode = request.getRoomCode();
                 String playerName = request.getPlayerName();
-                Room room = codeRoomMap.get(roomCode);
+                Room room = currentRoom;
 
                 // ensured by client procedure
                 assert (room != null);
@@ -119,7 +120,8 @@ public class PregameMessageHandler implements Runnable{
                     serverClientCommunicator.send(ServerClient.SCmsg.newBuilder().addOwnerStartGameResponse(
                             ServerClient.OwnerStartGameResponse.newBuilder()
                                     .setStatus(ServerClient.Status.SUCCESS)).build());
-                    threadPool.execute(new Game(room));
+                    room.broadcastSCMsg(ServerClient.SCmsg.newBuilder().addGameStartInform(
+                            ServerClient.GameStartInform.newBuilder()).build());
                 } else {
                     serverClientCommunicator.send(ServerClient.SCmsg.newBuilder().addOwnerStartGameResponse(
                             ServerClient.OwnerStartGameResponse.newBuilder()
@@ -129,8 +131,7 @@ public class PregameMessageHandler implements Runnable{
             } else if (msg.getRoomStatusRequestCount() > 0) {
                 ClientServer.RoomStatusRequest request = msg.getRoomStatusRequest(0);
                 String playerName = request.getPlayerName();
-                String roomCode = request.getRoomCode();
-                Room room = codeRoomMap.get(roomCode);
+                Room room = currentRoom;
 
                 // ensured by client procedure
                 assert (room != null);
@@ -139,6 +140,13 @@ public class PregameMessageHandler implements Runnable{
                 serverClientCommunicator.send(ServerClient.SCmsg.newBuilder().addRoomStatusResponse(
                         ServerClient.RoomStatusResponse.newBuilder()
                                 .setRoomStatus(room.getRoomStatus())).build());
+            } else if (msg.getGameStartAckCount() > 0) {
+                ClientServer.GameStartAck ack = msg.getGameStartAck(0);
+                String playerName = ack.getPlayerName();
+                if (currentRoom.isRoomOwner(playerName)) {
+                    threadPool.execute(new Game(currentRoom));
+                }
+                running = false;
             }
         }
     }
@@ -154,6 +162,7 @@ public class PregameMessageHandler implements Runnable{
         this.creatorRoomMap = creatorRoomMap;
         this.codeRoomMap = codeRoomMap;
         this.threadPool = threadPool;
+        this.currentRoom = null;
         running = true;
     }
 }

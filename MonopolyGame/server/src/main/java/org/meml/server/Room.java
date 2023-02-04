@@ -69,4 +69,18 @@ public class Room {
             communicator.send(sCmsg);
         }
     }
+
+    public synchronized boolean isRoomOwner(String playerName) {
+        return roomOwnerName.equals(playerName);
+    }
+
+    public synchronized String allPlayerNames() {
+        StringBuilder sb = new StringBuilder();
+        for (String playerName : playerNameIndexMap.keySet()) {
+            sb.append(playerName);
+            sb.append(", ");
+        }
+        sb.delete(sb.length()-2, sb.length());
+        return sb.toString();
+    }
 }
