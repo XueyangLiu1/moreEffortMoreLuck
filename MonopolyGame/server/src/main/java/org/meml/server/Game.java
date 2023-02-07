@@ -2,7 +2,6 @@ package org.meml.server;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.meml.shared.protocol.ServerClient;
 
 public class Game implements Runnable{
     private final Room room;
